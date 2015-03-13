@@ -25,6 +25,8 @@
 @media (max-width: 768px)  { 
     #main-navigation .navbar-brand { padding: 10px 15px; }
     #main-navigation ul.navbar-nav li { display: block; } 
+}
+@media (max-width: 767px)  { /* fix for portrait iPads and other viewports exactly 768px wide */
     #search-stack-mobile { margin-top: 0; float: none; }
 }
 .navbar-toggle { background-color: #721e3d; color: #fff}
