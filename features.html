@@ -3315,6 +3315,7 @@
         ================================================== -->
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="assets/js/jquery-2.1.3.min.js"></script>
+        <script src="assets/js/jquery.mobile.touch.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/getPosition.min.js"></script>
         <script src="assets/js/plugins/google-code-prettify/prettify.js"></script>
@@ -3324,45 +3325,53 @@
         
 
         <script>
-            $(document).ready(prettyPrint());
-            /* highlight the top nav as scrolling occurs */
-            $('body').scrollspy({target: '#affix-side-nav'});
-            /* smooth scrolling for nav sections */
-            $('#affix-side-ul li>a').click(function (event) {
-                event.preventDefault();
-                var link = $(this).attr('href');
-                var posi = $(link).offset().top;
-                $('body,html').animate({scrollTop: posi}, 700);
-                document.location.href = link;
-            });
-            /* affix nav bounding */
-            var offset_top = function () {
-                var content_top = getOffsetRect(document.getElementById("side-affix-intro")).top;
-                return content_top;
-            };
-            var offset_bottom = function () {
-                var content_top = getOffsetRect(document.getElementById("side-affix-intro")).top;
-                var section_height = $("#side-affix-intro").outerHeight();
-                var content_bottom = $("body").outerHeight() - (content_top + section_height);
-                return content_bottom;
-            }
-            $("#affix-side-ul").affix({offset: {top: offset_top, bottom: offset_bottom}});
+            $(document).ready(function() {
+                prettyPrint();
+                $("#historic-slider").swiperight(function() {
+                    $(this).carousel('prev');
+                });
+                $("#historic-slider").swipeleft(function() {
+                    $(this).carousel('next');
+                });
+                /* highlight the top nav as scrolling occurs */
+                $('body').scrollspy({target: '#affix-side-nav'});
+                /* smooth scrolling for nav sections */
+                $('#affix-side-ul li>a').click(function (event) {
+                    event.preventDefault();
+                    var link = $(this).attr('href');
+                    var posi = $(link).offset().top;
+                    $('body,html').animate({scrollTop: posi}, 700);
+                    document.location.href = link;
+                });
+                /* affix nav bounding */
+                var offset_top = function () {
+                    var content_top = getOffsetRect(document.getElementById("side-affix-intro")).top;
+                    return content_top;
+                };
+                var offset_bottom = function () {
+                    var content_top = getOffsetRect(document.getElementById("side-affix-intro")).top;
+                    var section_height = $("#side-affix-intro").outerHeight();
+                    var content_bottom = $("body").outerHeight() - (content_top + section_height);
+                    return content_bottom;
+                }
+                $("#affix-side-ul").affix({offset: {top: offset_top, bottom: offset_bottom}});
 
-            /* smooth scrolling for scroll to top */
-            $('#scroll-top').click(function () {
-                $('body,html').animate({scrollTop: 0}, 1000);
+                /* smooth scrolling for scroll to top */
+                $('#scroll-top').click(function () {
+                    $('body,html').animate({scrollTop: 0}, 1000);
+                });
+
+                $("#blurry-switch").click(function(e) {
+                    e.preventDefault();
+                    $('#blurry').removeClass('parallax');
+                })
+
+                $('[data-toggle="tooltip"]').tooltip()
+
+                /* catch iOS devices */
+                if (/iPad|iPhone|iPod/.test(navigator.userAgent))
+                    $("body").addClass("ios");
             });
-            
-            $("#blurry-switch").click(function(e) {
-                e.preventDefault();
-                $('#blurry').removeClass('parallax');
-            })
-            
-            $('[data-toggle="tooltip"]').tooltip()
-            
-            /* catch iOS devices */
-            if (/iPad|iPhone|iPod/.test(navigator.userAgent))
-                $("body").addClass("ios");
         </script>
     </body>
 </html>
