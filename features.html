@@ -2346,14 +2346,14 @@
                                                 </select>
                                             </div>
                                             <strong class="form-label">Radio Boxes</strong>
-                                            <div class="radio">
-                                                <label for="standardRadio1">
-                                                    <input type="radio" id="standardRadio1" name="standardRadio" value="" /> 
-                                                    Radio 1
-                                                </label>
-                                            </div>
                                             <fieldset>
                                                 <legend>Radios</legend>
+                                                <div class="radio">
+                                                    <label for="standardRadio1">
+                                                        <input type="radio" id="standardRadio1" name="standardRadio" value="" /> 
+                                                        Radio 1
+                                                    </label>
+                                                </div>
                                                 <div class="radio">
                                                     <label for="standardRadio2">
                                                         <input type="radio" id="standardRadio2" name="standardRadio" value="" /> 
@@ -2420,44 +2420,50 @@
                     &lt;option&gt;Option 3&lt;/option&gt;
                 &lt;/select&gt;
             &lt;/div&gt;
-            &lt;label&gt;Radio Boxes&lt;/label&gt;
-            &lt;div class="radio"&gt;
-                &lt;label for="standardRadio1"&gt;
-                    &lt;input type="radio" id="standardRadio1" name="standardRadio" value="" /&gt; 
-                    Radio 1
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio"&gt;
-                &lt;label for="standardRadio2"&gt;
-                    &lt;input type="radio" id="standardRadio2" name="standardRadio" value="" /&gt; 
-                    Radio 2
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="radio"&gt;
-                &lt;label for="standardRadio3"&gt;
-                    &lt;input type="radio" id="standardRadio3" name="standardRadio" value="" /&gt; 
-                    Radio 3
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;label&gt;Checkbox&lt;/label&gt;
-            &lt;div class="checkbox"&gt;
-                &lt;label for="standardCheckbox1"&gt;
-                    &lt;input type="checkbox" id="standardCheckbox1" name="standardCheckbox" value="" /&gt; 
-                    Checkbox 1
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="checkbox"&gt;
-                &lt;label for="standardCheckbox2"&gt;
-                    &lt;input type="checkbox" id="standardCheckbox2" name="standardCheckbox" value="" /&gt; 
-                    Checkbox 2
-                &lt;/label&gt;
-            &lt;/div&gt;
-            &lt;div class="checkbox"&gt;
-                &lt;label for="standardCheckbox3"&gt;
-                    &lt;input type="checkbox" id="standardCheckbox3" name="standardCheckbox" value="" /&gt; 
-                    Checkbox 3
-                &lt;/label&gt;
-            &lt;/div&gt;
+            &lt;strong class="form-label"&gt;Radio Boxes&lt;/strong&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Radios&lt;/legend&gt;
+                &lt;div class="radio"&gt;
+                    &lt;label for="standardRadio1"&gt;
+                        &lt;input type="radio" id="standardRadio1" name="standardRadio" value="" /&gt; 
+                        Radio 1
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="radio"&gt;
+                    &lt;label for="standardRadio2"&gt;
+                        &lt;input type="radio" id="standardRadio2" name="standardRadio" value="" /&gt; 
+                        Radio 2
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="radio"&gt;
+                    &lt;label for="standardRadio3"&gt;
+                        &lt;input type="radio" id="standardRadio3" name="standardRadio" value="" /&gt; 
+                        Radio 3
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
+            &lt;strong class="form-label"&gt;Checkbox&lt;/strong&gt;
+            &lt;fieldset&gt;
+                &lt;legend&gt;Checkboxes&lt;/legend&gt;
+                &lt;div class="checkbox"&gt;
+                    &lt;label for="standardCheckbox1"&gt;
+                        &lt;input type="checkbox" id="standardCheckbox1" name="standardCheckbox" value="" /&gt; 
+                        Checkbox 1
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="checkbox"&gt;
+                    &lt;label for="standardCheckbox2"&gt;
+                        &lt;input type="checkbox" id="standardCheckbox2" name="standardCheckbox" value="" /&gt; 
+                        Checkbox 2
+                    &lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class="checkbox"&gt;
+                    &lt;label for="standardCheckbox3"&gt;
+                        &lt;input type="checkbox" id="standardCheckbox3" name="standardCheckbox" value="" /&gt; 
+                        Checkbox 3
+                    &lt;/label&gt;
+                &lt;/div&gt;
+            &lt;/fieldset&gt;
             &lt;div class="form-group"&gt;
                 &lt;label for="standardFile"&gt;File&lt;/label&gt;
                 &lt;input type="file" id="standardFile" name="standardFile" /&gt;
@@ -2651,12 +2657,6 @@
                                                 <p class="form-control-static" id="standardStatic">Lorem Ipsum</p>
                                             </div>
                                         </div>
-                                        <div class="form-group">
-                                            <label class="control-label col-sm-3" for="modifiedSuccessText">Success</label>
-                                            <div class="col-sm-9 success">
-                                                <input type="text" class="form-control input-sm" id="modifiedSuccessText" placeholder="Success Text Input" />
-                                            </div>
-                                        </div>
                                     </form>
                                     <pre class="prettyprint">
                                         <code class="language-html" data-lang="html">
@@ -2717,12 +2717,6 @@
             &lt;strong class="control-label col-sm-3" for="standardStatic"&gt;Static Control&lt;/strong&gt;
             &lt;div class="col-sm-9"&gt;
                 &lt;p class="form-control-static" id="standardStatic"&gt;Lorem Ipsum&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class="form-group"&gt;
-            &lt;label class="control-label col-sm-3" for="modifiedSuccessText"&gt;Success&lt;/label&gt;
-            &lt;div class="col-sm-9 success"&gt;
-                &lt;input type="text" class="form-control input-sm" id="modifiedSuccessText" placeholder="Success Text Input" /&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/form&gt;
