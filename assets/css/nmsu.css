@@ -19,7 +19,7 @@
 #main-navigation ul.navbar-nav li a { border-left: solid 1px #dadada; }
 #main-navigation ul.navbar-nav li:last-of-type a { border-right: solid 1px #dadada; }
 #main-navigation, #main-navbar, #affix-nav { min-height: 0; }
-#search-stack-mobile { margin-top: -80px; float: right; }
+#search-stack { margin-top: -80px; float: right; }
 @media (max-width: 1200px) { #main-navigation ul.navbar-nav li a { font-size: 0.9em; padding: 10px 12px; } }
 @media (max-width: 992px)  { #main-navigation ul.navbar-nav li a { font-size: 0.8em; padding: 10px 8px; } }
 @media (max-width: 768px)  { 
@@ -27,7 +27,7 @@
     #main-navigation ul.navbar-nav li { display: block; } 
 }
 @media (max-width: 767px)  { /* fix for portrait iPads and other viewports exactly 768px wide */
-    #search-stack-mobile { margin-top: 0; float: none; }
+    #search-stack { margin-top: 0; float: none; }
 }
 .navbar-toggle { background-color: #721e3d; color: #fff}
 .navbar-toggle .icon-bar { background-color: #fff; color: #000; }

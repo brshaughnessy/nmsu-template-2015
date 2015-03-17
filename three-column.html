@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Example Layout for Bootstrap/NMSU Brand Development, Three Columns">
         <meta name="author" content="Brendan Shaughnessy">
+        <link rel="icon" href="/favicon.ico">
         <title>Bootstrapped Template, 3-Column | New Mexico State University - All About Discovery!</title>
 
         <!-- Bootstrap core CSS -->
@@ -29,14 +30,14 @@
         <header id="masthead" class="bg-primary hidden-xs" role="banner">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-8">
                         <div class="h1 row">
-                            <div class="col-lg-2 col-md-3 col-sm-2 col-xs-3">
+                            <div class="col-sm-2 col-xs-3">
                                 <a href="//nmsu.edu">
                                     <img id="logo" src="images/nmsu-logo-only.png" alt="NMSU logo" title="NMSU Home" class="img-responsive">
                                 </a>
                             </div>
-                            <div class="col-lg-10 col-md-9 col-sm-10 col-xs-9">
+                            <div class="col-sm-10 col-xs-9">
                                 <a href="//nmsu.edu">
                                     <img id="logo_tagline" src="images/nmsu-words-only.png" alt="NMSU tagline" title="NMSU Home" class="img-responsive">
                                 </a>
@@ -46,23 +47,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-1 hidden-xs hidden-sm">
-                        <div class="pull-right hidden-xs near-full-width padded-15">
-                            <div id="search-stack" class="offset-top-10"> 
-                                <div class="form-group" role="search">
-                                    <form action="http://www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search">
-                                        <div class="form-group has-feedback" role="search">
-                                            <label class="sr-only" for="search-query">Search</label>
-                                            <input name="q"  type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword" />
-                                            <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
-                                            <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
-                                            <input type="hidden" name="domains" value="nmsu.edu" />
-                                            <input type="hidden" name="sitesearch" value="nmsu.edu" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-4 col-md-offset-1 hidden-xs col-sm-4">
+                        <!-- place holder for search -->
                     </div>
                 </div>
             </div>
@@ -75,16 +61,32 @@
         ================================================== -->
         <nav class="navbar navbar-default navbar-static-top" id="main-navigation" role="navigation">
             <div class="container">
-                <div class="navbar-header bg-primary-dark" id="main-navigation-header">
+                <div class="navbar-header bg-primary-dark" id="main-navigation-container">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation-options">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="//nmsu.edu" class="navbar-brand visible-xs"><img src="images/logo-mobile-white2.png" alt="NMSU Logo"/></a>
+                    <a href="//nmsu.edu" class="navbar-brand visible-xs"><img src="images/logo-mobile-white.png" alt="NMSU Logo"/></a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-navigation-options">
+                    <div class="pull-right hidden-xs near-full-width padded-15">
+                        <div id="search-stack" class="offset-top-10"> 
+                            <div class="form-group" role="search">
+                                <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search">
+                                    <div class="form-group has-feedback" role="search">
+                                        <label class="sr-only" for="search-query">Search</label>
+                                        <input name="q"  type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword" />
+                                        <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
+                                        <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
+                                        <input type="hidden" name="domains" value="nmsu.edu" />
+                                        <input type="hidden" name="sitesearch" value="nmsu.edu" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="nav navbar-nav">
                         <li><a href="features.html">Feature Sheet</a></li>
                         <li><a href="hero-slideshow.html">Hero Slideshow</a></li>
@@ -110,15 +112,15 @@
                 </ol>
             </nav>
             <div class="row">
-                <section id="sidebar" class="col-sm-3">
+                <aside id="sidebar-left" class="col-sm-3">
                     <h2>Left Sidebar</h2>
                     <ul class="nav"> 
                         <li class="active"><a href="#lorem">Lorem</a></li>
                         <li class="active"><a href="#ipsum">Ipsum</a></li>
                     </ul>
-                </section><!-- end of right sidebar -->
+                </aside><!-- end of right sidebar -->
                 
-                <section id="content" class="col-sm-6" role="main">
+                <div id="content" class="col-sm-6" role="main">
                     <h1>Layout Example <small>Three-Column</small></h1>
                     <article id="lorem">
                         <h2>Article 1</h2>
@@ -131,61 +133,19 @@
                         <p>Donec sit amet tristique augue. Fusce cursus sodales rhoncus. Aliquam non libero cursus, tempus odio in, placerat tellus. In non ultrices mauris, eu tincidunt mi. Donec feugiat lorem at arcu tristique, nec malesuada nunc euismod. Pellentesque sed tortor non libero malesuada scelerisque. Cras a odio aliquet, volutpat neque ac, sodales ipsum. Nam orci libero, bibendum id sem sit amet, gravida vestibulum orci. Sed consequat id velit sed ultrices. Vivamus luctus sollicitudin vehicula. Curabitur nibh arcu, congue sed ligula eu, tincidunt tincidunt nisl. Praesent in hendrerit arcu. Maecenas nec sem lobortis purus imperdiet vehicula sed sit amet metus. Vivamus leo lacus, dignissim sed ligula at, mollis pulvinar velit. Curabitur vitae sem imperdiet, pharetra felis ac, molestie felis.</p>
                         <p>Vestibulum pulvinar pretium augue, non aliquet urna commodo ut. In dictum a orci in mattis. Quisque eget ornare nisi. Nulla eget viverra dui. Proin non tortor tristique, bibendum justo vel, condimentum mauris. Morbi pretium massa sit amet elementum consequat. Suspendisse tristique orci eu lobortis tincidunt. Duis malesuada sollicitudin lorem ac iaculis.</p>
                     </article>
-                </section>  <!-- end of content -->
+                </div>  <!-- end of content -->
                 
-                <section id="sidebar" class="col-sm-3">
+                <aside id="sidebar-right" class="col-sm-3">
                     <h2>Right Sidebar</h2>
                     <ul class="nav"> 
                         <li class="active"><a href="#lorem">Dolor</a></li>
                         <li class="active"><a href="#ipsum">Sit Amet</a></li>
                     </ul>
-                </section><!-- end of left sidebar -->
+                </aside><!-- end of left sidebar -->
             </div><!-- end of row -->
         </div><!-- end of container -->
 
         <footer>
-            <hr />
-            <!-- Bottom Footer
-            ================================================== -->
-            <section id="section5" class="bg-5 text-center">
-                <img src="images/bottom-tagline.png" width="480" height="136" alt="New Mexico State University, All About Discovery" class="img-responsive center-block">
-                <hr>
-                <ul class="list-inline">
-                    <li>
-                        <a href="http://www.facebook.com/newmexicostateuniversity">
-                            <img alt="New Mexico State University Facebook" src="images/icn_facebook_32.png" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://twitter.com/#!/nmsu">
-                            <img alt="New Mexico State University Twitter" src="images/icn_twitter_32.png" />
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.youtube.com/newmexicostateu">
-                            <img alt="New Mexico State University YouTube" src="images/icn_youtube_32.png" />
-                        </a>
-                    </li>
-                </ul>
-                <address>
-                    <ul class="list-inline separated">
-                        <li>New Mexico State University</li>
-                        <li>Las Cruces, NM</li>
-                        <li>(575) 646-0111</li>
-                    </ul>
-                </address>
-                <hr />
-                <nav role="navigation">
-                    <ul class="list-inline separated">
-                        <li><a title="General Information: Contact Us" href="#">Contact Us</a></li>
-                        <li><a title="General Information: Copyright" href="#">Copyright</a></li>
-                        <li><a title="General Information: Privacy" href="#">Privacy</a></li>
-                        <li><a title="General Information: Emergency Information" href="#">Emergency Information</a></li>
-                        <li><a title="Search for Employment and Careers" href="http://jobs.nmsu.edu">Employment Opportunities</a></li>
-                    </ul>
-                </nav>
-            </section>
-
             <!-- Legal and Copyright
             ================================================== -->
             <div id="copyright" class="bg-primary" role="contentinfo">
@@ -201,9 +161,8 @@
             <li><a href="#" title="Scroll to top" aria-label="Scroll to top"><span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Scroll to Top</span></a></li>
         </ul>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="assets/js/jquery-2.1.3.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/getPosition.min.js"></script>
     </body>
 </html>

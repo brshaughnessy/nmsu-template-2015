@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Empty page for Bootstrap/NMSU Brand Development">
         <meta name="author" content="Brendan Shaughnessy">
+        <link rel="icon" href="/favicon.ico">
         <title>Bootstrapped Template, 1-Column Top Affix Navigation | New Mexico State University - All About Discovery!</title>
 
         <!-- Bootstrap core CSS -->
@@ -32,14 +33,14 @@
         <header id="masthead" class="bg-primary hidden-xs" role="banner">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7">
+                    <div class="col-md-7 col-sm-8">
                         <div class="h1 row">
-                            <div class="col-lg-2 col-md-3 col-sm-2 col-xs-3">
+                            <div class="col-sm-2 col-xs-3">
                                 <a href="//nmsu.edu">
                                     <img id="logo" src="images/nmsu-logo-only.png" alt="NMSU logo" title="NMSU Home" class="img-responsive">
                                 </a>
                             </div>
-                            <div class="col-lg-10 col-md-9 col-sm-10 col-xs-9">
+                            <div class="col-sm-10 col-xs-9">
                                 <a href="//nmsu.edu">
                                     <img id="logo_tagline" src="images/nmsu-words-only.png" alt="NMSU tagline" title="NMSU Home" class="img-responsive">
                                 </a>
@@ -49,24 +50,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-1 hidden-xs hidden-sm">
-                        <div class="pull-right hidden-xs near-full-width padded-15">
-                            <!-- End Search Drop Down -->
-                            <div id="search-stack" class="offset-top-10"> 
-                                <div class="form-group" role="search">
-                                    <form action="http://www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search">
-                                        <div class="form-group has-feedback" role="search">
-                                            <label class="sr-only" for="search-query">Search</label>
-                                            <input name="q"  type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword" />
-                                            <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
-                                            <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
-                                            <input type="hidden" name="domains" value="nmsu.edu" />
-                                            <input type="hidden" name="sitesearch" value="nmsu.edu" />
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                    <div class="col-md-4 col-md-offset-1 hidden-xs col-sm-4">
+                        <!-- place holder for search -->
                     </div>
                 </div>
             </div>
@@ -86,9 +71,25 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="//nmsu.edu" class="navbar-brand visible-xs"><img src="images/logo-mobile-white2.png" alt="NMSU Logo"/></a>
+                    <a href="//nmsu.edu" class="navbar-brand visible-xs"><img src="images/logo-mobile-white.png" alt="NMSU Logo"/></a>
                 </div>
                 <div class="collapse navbar-collapse" id="main-navigation-options">
+                    <div class="pull-right hidden-xs near-full-width padded-15">
+                        <div id="search-stack" class="offset-top-10"> 
+                            <div class="form-group" role="search">
+                                <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search">
+                                    <div class="form-group has-feedback" role="search">
+                                        <label class="sr-only" for="search-query">Search</label>
+                                        <input name="q"  type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword" />
+                                        <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
+                                        <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
+                                        <input type="hidden" name="domains" value="nmsu.edu" />
+                                        <input type="hidden" name="sitesearch" value="nmsu.edu" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                     <ul class="nav navbar-nav">
                         <li><a href="features.html">Feature Sheet</a></li>
                         <li><a href="hero-slideshow.html">Hero Slideshow</a></li>
@@ -141,7 +142,7 @@
                 </ol>
             </nav>
             <div class="row">
-                <section id="content" class="col-sm-12" role="main">
+                <div id="content" class="col-sm-12" role="main">
                     <h1>Layout Example <small>One-Column, Top Affix Navigation</small></h1>
                     <article id="lorem">
                         <h2>Article 1</h2>
@@ -174,7 +175,7 @@
                         <p>Nam pretium dolor quis lorem consequat cursus. Mauris euismod ullamcorper convallis. Pellentesque mattis mi gravida, rutrum neque non, placerat dolor. Suspendisse vestibulum feugiat tincidunt. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc sodales, sem vitae laoreet accumsan, quam mauris tempus lectus, vitae volutpat nulla urna vitae magna. Aenean nec tellus id lorem vehicula porttitor. Morbi suscipit, mauris eu tempus dapibus, nisl lectus aliquam neque, eget eleifend neque mauris eget metus. Integer congue sem quis vulputate vulputate.</p>
                         <p>Curabitur libero nisi, pellentesque id augue sit amet, blandit ultrices ex. Fusce elementum tincidunt libero, sit amet sagittis velit hendrerit eget. Maecenas luctus porttitor suscipit. Vivamus tempor purus eu eleifend convallis. Morbi in malesuada orci, nec imperdiet nulla. Nullam ac varius dolor. Vivamus viverra purus sit amet rutrum suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce eu nisi id leo laoreet pharetra. Curabitur iaculis ex in leo vulputate, lobortis eleifend mi ullamcorper. </p>
                     </article>
-                </section>  
+                </div>  
             </div><!-- end of row -->
         </div><!-- end of container -->
 
@@ -185,6 +186,7 @@
                 <p>&nbsp;</p>
             </div>
         </div>
+        
         <footer>
             <hr />
             <!-- Bottom Footer
@@ -243,7 +245,7 @@
             <li><a href="#" title="Scroll to top" aria-label="Scroll to top"><span class="glyphicon glyphicon-chevron-up"></span><span class="sr-only">Scroll to Top</span></a></li>
         </ul>
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+        <script src="assets/js/jquery-2.1.3.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script src="assets/js/getPosition.min.js"></script>
