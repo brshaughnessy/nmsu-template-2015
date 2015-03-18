@@ -106,8 +106,8 @@
         </nav>
 
         <!-- Page Detail -->
-        <div id="hero">
-            <div class="carousel slide inline-block" id="hero-slider" data-ride="carousel">
+        <div id="hero" class="slideshow">
+            <div class="carousel slide" id="hero-slider" data-ride="carousel">
                 <!-- indicators -->
                 <ol class="carousel-indicators">
                     <li data-target="#hero-slider" data-slide-to="0" class="active"></li>
@@ -181,13 +181,14 @@
                         <h2>Hero Slideshow Information</h2>
                         <p>The hero slideshow is a difficult element to incorporate, but it can be very rewarding.  Unlike basic hero images, hero slideshow images cannot be styled to fit the viewport independent of the container.
                             This means that hero slideshow images might be fit into an aspect ratio around 1 to 1 (320px by 300px) on mobile and an aspect ratio of almost 4 to 1 (1900px by 500px) on a large screen.
-                            All images used should have high enough resolution to display well on larger screens.  However, larger images can hurt mobile performance, so know your audience. 
+                            All images used should have high enough resolution to display well on larger screens.  However, larger images can hurt mobile performance, so know your audience or consider lazy load solutions. 
                             Images should also have a landscape orientation to avoid as much distortion as possible.  Natural aspect ratios around 2 to 1 seem to work well. The images above are 1024px by 500px.
+                            It is also important to add the <em>.slideshow</em> class to the <em>#hero</em> element to avoid a crimson bar of padding beneath the slideshow.
                         </p>
                         <pre class="prettyprint">
                             <code class="language-html" data-lang="html">
-    &lt;div id="hero"&gt;
-        &lt;div class="carousel slide inline-block" id="hero-slider" data-ride="carousel"&gt;
+    &lt;div id="hero" class="slideshow"&gt;
+        &lt;div class="carousel slide" id="hero-slider" data-ride="carousel"&gt;
             &lt;!-- indicators --&gt;
             &lt;ol class="carousel-indicators"&gt;
                 &lt;li data-target="#hero-slider" data-slide-to="0" class="active"&gt;&lt;/li&gt;

@@ -380,6 +380,30 @@
     });
                                         </code>
                                     </pre>
+                                    <p>The solution used on this page combines the <em>getPosition.min.js</em> library (must be included explicitly) with jQuery's <code>getOuterheight()</code> function to 
+                                        calculate the top and bottom of the parent container.  By calculating these values in a function and sending those function calls as the offset_top and offset_bottom 
+                                        to Affix, we are able to set a dynamic containing element for the Affix navigation.
+                                    </p>
+                                    <pre class="prettyprint">
+                                        <code class="language-js" data-lang="js">
+    var offset_top = function () {
+        var content_top = getOffsetRect(document.getElementById("side-affix-intro")).top;
+        return content_top;
+    };
+    var offset_bottom = function () {
+        var content_top = getOffsetRect(document.getElementById("side-affix-intro")).top;
+        var section_height = $("#side-affix-intro").outerHeight();
+        var content_bottom = $("body").outerHeight() - (content_top + section_height);
+        return content_bottom;
+    }
+    $("#affix-side-ul").affix({
+        offset: {
+            top: offset_top, 
+            bottom: offset_bottom
+        }
+    });
+                                        </code>
+                                    </pre>
                                 </div>
                                 <div class="list-group-item" id="affix-scrollspy">
                                     <h3>Affix and Scrollspy</h3>
@@ -660,6 +684,23 @@
         interval: 2500,
         wrap: false,
         pause: false
+    });
+                                        </code>
+                                    </pre>
+                                </div>
+                                <div class="list-group-item">
+                                    <h3>Adding Swipe Functions to Carousel</h3>
+                                    <p>If you would like to enable touch features for Carousel (or other components in general), the easiest way is to use jQuery Mobile's touch libraries.  A minified version
+                                        of the touch library (without any other jQuery Mobile features) is available in the default <em>assets/js/</em> folder in the development templates.  The code below gives an
+                                        example of activating swipe behaviors to manipulate the Carousel.
+                                    </p>
+                                    <pre class="prettyprint">
+                                        <code class="language-js" data-lang="js">
+    $("#historic-slider").swiperight(function() {
+        $(this).carousel('prev');
+    });
+    $("#historic-slider").swipeleft(function() {
+        $(this).carousel('next');
     });
                                         </code>
                                     </pre>
@@ -3208,7 +3249,12 @@
                             </li>
                             <li><a href="#overlay-captions">Overlay Captions</a></li>
                             <li><a href="#parallax-text">Parallax Backgrounds</a></li>
-                            <li><a href="#carousel-text">Carousel</a></li>
+                            <li><a href="#carousel-text">Carousel</a>
+                                <ul class="nav">
+                                    <li><a href="#carousel-activate-text">Activation &amp; Customization</a></li>
+                                    <li><a href="#carousel-touch-text">Touch Controls</a></li>
+                                </ul>
+                            </li>
                             <li><a href="#collapse-text">Collapse</a>
                                 <ul class="nav">
                                     <li><a href="#accordions-text">Accordions</a></li>

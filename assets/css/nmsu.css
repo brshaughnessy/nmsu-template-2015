@@ -66,6 +66,8 @@
 #affix-side-nav ul { list-style: none; }
 #affix-side-nav ul.affix { position: fixed; top: 3em; /* matches margin-top of parent */ width:225px; }
 #affix-side-nav li.active > a { font-weight: bold; border-left: 1px solid #ddd; color: #741f3f; }
+#affix-side-nav .nav > li > a { padding: 4px 15px; }
+#affix-side-nav li > .nav > li > a { padding: 2px 20px 2px 10px; }
 #affix-side-nav ul > li > ul { padding-left: 15px; }
 #affix-side-nav ul > li:not(.active) > ul { display: none; }
 
@@ -80,6 +82,7 @@
 #hero .carousel-inner > .item { max-height: 500px; }
 #hero .carousel-inner > .item > img { width: 100%; max-height: 500px; }
 #hero.no-stretch .carousel-inner > .item > img { max-height: none; }
+#hero.slideshow { padding-bottom: 0; }
 @media (max-width: 768px) { 
     #hero .carousel-inner .item .btn-lg { padding: 6px 12px; font-size: 14px; line-height: 1.42857143; border-radius: 4px; } 
     #hero:not(.no-squeeze) .carousel-inner > .item > img { min-height: 300px; }
