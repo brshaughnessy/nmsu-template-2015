@@ -12,7 +12,7 @@
     max-width: 60%; 
 }
 #masthead { 
-    background-image: url("../../images/swoosh-reg.png"); 
+    background-image: url("../images/swoosh-reg.png"); 
     background-repeat: repeat-x; min-height: 120px; 
 }
 #masthead .h1, 
