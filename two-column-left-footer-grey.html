@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Example Layout for Bootstrap/NMSU Brand Development, Two Columns, Sidebar Right">
+        <meta name="description" content="Example Layout for Bootstrap/NMSU Brand Development, Three Column Footer Grey">
         <meta name="author" content="Brendan Shaughnessy">
         <link rel="icon" href="assets/images/favicon.ico">
-        <title>Bootstrapped Template, 2-Column Right | New Mexico State University - All About Discovery!</title>
+        <title>Bootstrapped Template, 2-Column Content, 3-Column Footer | New Mexico State University - All About Discovery!</title>
 
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap-nmsu.min.css" rel="stylesheet" type="text/css">
@@ -114,12 +114,12 @@
                     <li><a href="http://nmsu.edu">Home</a></li>
                     <li><a href="http://brand.nmsu.edu">Branding</a></li>
                     <li><a href="http://brand.nmsu.edu/web-development">Web Development</a></li>
-                    <li>Two-Column Right Layout Example</li>
+                    <li>3-Column Grey Footer Layout Example</li>
                 </ol>
             </nav>
             <div class="row">
-                <div id="content" class="col-sm-9" role="main">
-                    <h1>Layout Example <small>Two-Column with Right Sidebar</small></h1>
+                <main id="content" class="col-sm-9 col-sm-push-3" role="main">
+                    <h1>Layout Example <small>3-Column Grey Footer</small></h1>
                     <article id="lorem">
                         <h2>Article 1</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida cursus massa et convallis. Vivamus non quam nec urna maximus eleifend. Mauris non sapien ac erat vehicula luctus. Etiam faucibus ligula eu eros varius, nec finibus lacus feugiat. Nunc quis sem suscipit, consectetur ex sed, scelerisque lectus. Phasellus turpis nunc, rutrum a consectetur vitae, dictum in magna. Ut vel faucibus nisl. Maecenas ac sagittis orci. In lacinia vitae nisl ac fermentum. Curabitur rutrum ipsum magna, ut imperdiet massa vestibulum eu.</p>
@@ -131,19 +131,62 @@
                         <p>Donec sit amet tristique augue. Fusce cursus sodales rhoncus. Aliquam non libero cursus, tempus odio in, placerat tellus. In non ultrices mauris, eu tincidunt mi. Donec feugiat lorem at arcu tristique, nec malesuada nunc euismod. Pellentesque sed tortor non libero malesuada scelerisque. Cras a odio aliquet, volutpat neque ac, sodales ipsum. Nam orci libero, bibendum id sem sit amet, gravida vestibulum orci. Sed consequat id velit sed ultrices. Vivamus luctus sollicitudin vehicula. Curabitur nibh arcu, congue sed ligula eu, tincidunt tincidunt nisl. Praesent in hendrerit arcu. Maecenas nec sem lobortis purus imperdiet vehicula sed sit amet metus. Vivamus leo lacus, dignissim sed ligula at, mollis pulvinar velit. Curabitur vitae sem imperdiet, pharetra felis ac, molestie felis.</p>
                         <p>Vestibulum pulvinar pretium augue, non aliquet urna commodo ut. In dictum a orci in mattis. Quisque eget ornare nisi. Nulla eget viverra dui. Proin non tortor tristique, bibendum justo vel, condimentum mauris. Morbi pretium massa sit amet elementum consequat. Suspendisse tristique orci eu lobortis tincidunt. Duis malesuada sollicitudin lorem ac iaculis.</p>
                     </article>
-                </div>  <!-- end of content -->
+                </main><!-- end of main --> 
                 
-                <aside id="sidebar" class="sidebar col-sm-3">
-                    <h2>Right Sidebar</h2>
-                    <ul class="nav"> 
-                        <li class="active"><a href="#lorem">Lorem</a></li>
-                        <li class="active"><a href="#ipsum">Ipsum</a></li>
-                    </ul>
+                <aside id="sidebar" class="sidebar col-sm-3 col-sm-pull-9"> <!-- sidebar content is assumed to be supplemental and so written to render after main content outside of styling -->
+                    <h2>Left Sidebar</h2>
+                    <nav role="navigation">
+                        <ul class="nav"> 
+                            <li><a href="two-column-left.html">Standard</a></li>
+                            <li><a href="two-column-left-toplinks.html">Masthead Links</a></li>
+                            <li><a href="two-column-left-hero-2.html">Second Level Hero</a></li>
+                            <li><a href="two-column-left-footer.html">3-Column Footer</a></li>
+                            <li><a href="two-column-left-footer-grey.html">Grey Footer</a></li>
+                        </ul>
+                    </nav>
                 </aside><!-- end of sidebar -->
             </div><!-- end of row -->
         </div><!-- end of container -->
 
-        <footer>
+        <footer class="bg-grey">
+            <hr/>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3"><!-- 3 grid columns to match sidebar -->
+                        <p class="h3">Footer Nav Example</p>
+                        <nav role="navigation">
+                            <ul class="nav">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                                <li><a href="#">Link 3</a></li>
+                                <li><a href="#">Link 4</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-sm-5">
+                        <p class="h3">Footer Info Example</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi gravida cursus massa et convallis. Vivamus non quam nec urna maximus eleifend. Mauris non sapien ac erat vehicula luctus. Etiam faucibus ligula eu eros varius, nec finibus lacus feugiat.</p>
+                        <p> Phasellus turpis nunc, rutrum a consectetur vitae, dictum in magna. Ut vel faucibus nisl. Maecenas ac sagittis orci. In lacinia vitae nisl ac fermentum.</p>
+                    </div>
+                    <div class="col-sm-3 col-sm-offset-1"> <!-- narrow symmetric column w/ small offset -->
+                        <p class="h3">Contact Information</p>
+                        <address>
+                            <strong>University Communications</strong><br>
+                            MSC 3K, PO BOX 30001<br>
+                            Las Cruces, NM 88003<br>
+                            <a href="https://myaccount.nmsu.edu/phonebook/hierarchy?department=University+Communications">Directory</a><br><br>
+                            Phone: 575-646-3221 <br>
+                            E-mail: <a href="mailto:ucomm@nmsu.edu">ucomm@nmsu.edu</a><br>
+                        </address>
+                        <ul class="list-inline">
+                            <li><a href="http://www.facebook.com/NMSUNews" target="_blank"><img src="/images/icn_facebook_32.png" alt="Facebook" title="Facebook"></a></li>
+                            <li><a href="http://www.twitter.com/nmsunews" target="_blank"><img src="/images/icn_twitter_32.png" alt="Twitter" title="Twitter"></a></li>
+                            <li><a href="http://www.youtube.com/nmsunews" target="_blank"><img src="/images/icn_youtube_32.png" alt="YouTube" title="YouTube"></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <br/>
             <!-- Legal and Copyright
             ================================================== -->
             <div id="copyright" class="bg-primary" role="contentinfo">
@@ -162,6 +205,5 @@
         <script src="assets/js/jquery-2.1.3.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
-        <script src="assets/js/getPosition.min.js"></script>
     </body>
 </html>

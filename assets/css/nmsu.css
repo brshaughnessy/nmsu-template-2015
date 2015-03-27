@@ -1,147 +1,489 @@
-/**** Masthead ****/
-#mosaic { position:absolute; top:0; right: 0; max-width: 50%; }
-#mosaic-low { margin-top: -36px; max-width: 60%; }
-#masthead { background-image: url("../../images/swoosh-reg.png"); background-repeat: repeat-x; min-height: 120px; }
-#masthead .h1 { display: inline-block; }
-#masthead .h1 a img { float: left; }
-#masthead .h1 small { float: left; color: #fff; font-size: 60%; font-weight: 500; }
-#masthead .h1 a small:hover { text-decoration: underline; }
-#masthead #search-site { margin-top: 70px; }
-#insideNMSU { padding: 10px 0 5px 0; }
+/*
+ *** Masthead ***
+ */
+#mosaic { 
+    position:absolute; 
+    top:0; 
+    right: 0; 
+    max-width: 50%; 
+}
+#mosaic-low { 
+    margin-top: -36px; 
+    max-width: 60%; 
+}
+#masthead { 
+    background-image: url("../../images/swoosh-reg.png"); 
+    background-repeat: repeat-x; min-height: 120px; 
+}
+#masthead .h1, 
+#masthead h1 { 
+    display: inline-block; 
+}
+#masthead .h1 a img, 
+#masthead h1 a img { 
+    float: left; 
+}
+#masthead .h1 small, 
+#masthead .h1 small { 
+    float: left; 
+    color: #fff; 
+    font-size: 50%; 
+    font-weight: 500; 
+}
+#masthead .h1 a small:hover, 
+#masthead h1 a small:hover {
+    text-decoration: underline; 
+}
 
-/**** Navigation ****/
+/* Masthead Links */
+#masthead-links .navbar-nav {
+    margin-bottom: -30px;       /* Pull masthead up into element all but 8px.  Font size adjustments client-side may cause overlap. */
+}
+#masthead-links .navbar-nav > li > a {
+    padding: 14px 9px 0; 
+    font-weight: bold; 
+    color: #fff; 
+    font-size: 0.8em; 
+} 
+#masthead-links .navbar-nav > li > a:hover {
+    background-color: transparent; 
+    color: #df7a00; 
+} 
+#masthead .nav .open>a, 
+#masthead .nav .open>a:hover, 
+#masthead .nav .open>a:focus {
+    background-color: transparent; 
+    color: #df7a00; 
+}
+
+/***
+ * Navigation ***
+ */
 /* Global */
-#global-link-list { z-index: 1030; }  /* keep over top nav */
-#main-navigation {  margin: 0; }
-#main-navigation ul.navbar-nav { float: none; text-align: center; }
-#main-navigation ul.navbar-nav li { display: inline-block; float: none; margin-left: -5px; }  /* negative margin to make <li> edges flush */
-#main-navigation ul.navbar-nav li .dropdown-menu li { margin: 0; display: block; }  /* negative margin to make <li> edges flush */
-#main-navigation ul.navbar-nav li a { border-left: solid 1px #dadada; }
-#main-navigation ul.navbar-nav li:last-of-type a { border-right: solid 1px #dadada; }
-#main-navigation, #main-navbar, #affix-nav { min-height: 0; }
-#search-stack { margin-top: -80px; float: right; }
-@media (max-width: 1200px) { #main-navigation ul.navbar-nav li a { font-size: 0.9em; padding: 10px 12px; } }
-@media (max-width: 992px)  { #main-navigation ul.navbar-nav li a { font-size: 0.8em; padding: 10px 8px; } }
-@media (max-width: 768px)  { 
-    #main-navigation .navbar-brand { padding: 10px 15px; }
-    #main-navigation ul.navbar-nav li { display: block; } 
+#global-link-list {
+    z-index: 1030; 
+}  /* keep over top nav */
+#main-navigation {
+    margin: 0; 
 }
-@media (max-width: 767px)  { /* fix for portrait iPads and other viewports exactly 768px wide */
-    #search-stack { margin-top: 0; float: none; }
+#main-navigation ul.navbar-nav {
+    float: none; 
+    text-align: center; 
 }
-@media (max-width: 400px) { 
-    #main-navigation .navbar-brand { padding: 16px 10px 5px 15px; } 
-    #main-navigation .navbar-brand img { width: 235px; } 
+#main-navigation ul.navbar-nav li {
+    display: inline-block; 
+    float: none; 
+    margin-left: -5px; /* negative margin to make <li> edges flush */
+}  
+#main-navigation ul.navbar-nav li .dropdown-menu li {
+    margin: 0; 
+    display: block; 
+}  
+#main-navigation ul.navbar-nav li a {
+    border-left: solid 1px #dadada; 
 }
-.navbar-toggle { background-color: #721e3d; color: #fff}
-.navbar-toggle .icon-bar { background-color: #fff; color: #000; }
-#sidebar a { margin-bottom: 0.35em; }
-#sidebar .dropdown-menu a { color: #fff; }
-@media (min-width: 500px) { .navmenu { width: 400px; } }
+#main-navigation ul.navbar-nav li:last-of-type a {
+    border-right: solid 1px #dadada; 
+}
+#main-navigation, #main-navbar, #affix-nav {
+    min-height: 0; 
+}
+#search-stack {
+    margin-top: -80px; 
+    float: right; 
+}
+@media (max-width: 1200px) { 
+    #main-navigation ul.navbar-nav li a {
+        font-size: 0.9em; padding: 10px 12px; 
+    } 
+}
+@media (max-width: 992px)  { 
+    #main-navigation ul.navbar-nav li a {
+        font-size: 0.8em; padding: 10px 8px; 
+    } 
+}
+@media (max-width: 768px)  {
+    #main-navigation .navbar-brand {
+        padding: 10px 15px; 
+    }
+    #main-navigation ul.navbar-nav li {
+        display: block; 
+    } 
+}
+@media (max-width: 767px)  {
+    /* fix for portrait iPads and other viewports exactly 768px wide */
+    #search-stack {
+        margin-top: 0; float: none; 
+    }
+}
+@media (max-width: 400px) {
+    #main-navigation .navbar-brand {
+        padding: 12px 10px 8px 15px; 
+    } 
+    #main-navigation .navbar-brand img {
+        width: 235px; 
+    } 
+}
+.navbar-toggle {
+    background-color: #721e3d; 
+    color: #fff
+}
+.navbar-toggle .icon-bar {
+    background-color: #fff; 
+    color: #000; 
+}
+@media (min-width: 500px) { 
+    .navmenu {
+        width: 400px; 
+    } 
+}
 /* fix specifically for iPads in portrait with a viewport width sitting perfectly on the 768px breakpoint and causing display:block <li>s without collapsing */
-@media (min-width: 768px) and (max-width: 768px) { #main-navigation ul.navbar-nav li { display: inline-block; } }
+@media (min-width: 768px) and (max-width: 768px) { 
+    #main-navigation ul.navbar-nav li {
+        display: inline-block; 
+    } 
+}
 
 /* Main */
-.navbar-default .navbar-nav > li > a { color: #490513; font-size: 1em; font-weight: bold; }
-.navbar-default .navbar-nav > li > a:hover { color: #882345; background-color: #ffffff; }
-.navbar-inverse a { color: #fff; }
-.navbar-custom { background: transparent; border: 0; color: white; margin: 0; padding: 0; min-height: 20px; }
-.navbar-custom ul li { float: left; }
-.navbar-custom ul li a { color: white; padding: 6px; }
-.navbar-custom ul li a:hover { color: #ffcc33; background-color: transparent; }
-
-/* Breadcrumb */
-.breadcrumb { background-color: transparent; }
-.breadcrumb>li+li:before { font-family: "Glyphicons Halflings"; content: "\e080"; padding-right: 0.5em; }
-@media (max-width: 768px)  { .breadcrumb>li {margin-bottom: 5px; } }
-
-/* Affix */
-.affix-bottom { position: absolute; z-index: 1030; }  /* to prevent JQuery offset() from setting position in style and to keep navbar on top of content even at bottom */
-
-/* Affix Top */
-#affix-nav { width: 100%; margin: -2.35em 0 0; }
-#affix-nav a { text-transform: uppercase; font-size: 1em; padding: 0.625em 1em; }
-#affix-nav.affix { margin: 0; top: 0; left: 0; border: 0; border-radius: 0; z-index: 1001; }
-#affix-nav li.active > a { font-weight: bold; background-color: #444; }
-#affix-nav a:hover { background-color: #444; } 
-
-/* Affix Side */
-#affix-side-nav { margin-top: 3em; }
-#affix-side-nav ul { list-style: none; }
-#affix-side-nav ul.affix { position: fixed; top: 3em; /* matches margin-top of parent */ width:225px; }
-#affix-side-nav li.active > a { font-weight: bold; border-left: 1px solid #ddd; color: #741f3f; }
-#affix-side-nav .nav > li > a { padding: 4px 15px; }
-#affix-side-nav li > .nav > li > a { padding: 2px 20px 2px 10px; }
-#affix-side-nav ul > li > ul { padding-left: 15px; }
-#affix-side-nav ul > li:not(.active) > ul { display: none; }
-
-#scroll-top { background: #ffcc33; font-size: x-large; border-top-left-radius:3px; border-top-right-radius:3px; }
-#scroll-top a, #scroll-top a:visited { color: #222; }
-
-/**** Hero Element ****/
-#hero { background-color: #882345; color: #fff; margin: 0; padding-bottom: 2em; }
-#hero h1, #hero .h1, #hero h2, #hero .h2 { font-size: 5em; padding-top: 2em; }
-/* Hero Slideshow */
-#hero .carousel { width: 100%; max-height: 500px; overflow-y: hidden;  }
-#hero .carousel-inner > .item { max-height: 500px; }
-#hero .carousel-inner > .item > img { width: 100%; max-height: 500px; }
-#hero.no-stretch .carousel-inner > .item > img { max-height: none; }
-#hero.slideshow { padding-bottom: 0; }
-@media (max-width: 768px) { 
-    #hero .carousel-inner .item .btn-lg { padding: 6px 12px; font-size: 14px; line-height: 1.42857143; border-radius: 4px; } 
-    #hero:not(.no-squeeze) .carousel-inner > .item > img { min-height: 300px; }
+.navbar-default .navbar-nav > li > a {
+    color: #490513; 
+    font-size: 1em; 
+    font-weight: bold; 
+}
+.navbar-default .navbar-nav > li > a:hover {
+    color: #882345; 
+    background-color: #ffffff; 
+}
+.navbar-inverse a {
+    color: #fff; 
+}
+.navbar-custom {
+    background: transparent; 
+    border: 0; 
+    color: white; 
+    margin: 0; 
+    padding: 0; 
+    min-height: 20px; 
+}
+.navbar-custom ul li {
+    float: left; 
+}
+.navbar-custom ul li a {
+    color: white; 
+    padding: 6px; 
+}
+.navbar-custom ul li a:hover {
+    color: #ffcc33; 
+    background-color: transparent; 
 }
 
-/**** Footer ****/
-body > footer { margin-top: 20px; }
-#footer-top { padding: 100px 0 100px; }
+/* Breadcrumb */
+.breadcrumb, 
+#breadcrumbs {
+    background-color: transparent; 
+}
+.breadcrumb>li+li:before, 
+#breadcrumbs>li+li:before {
+    font-family: "Glyphicons Halflings"; 
+    content: "\e080"; 
+    padding-right: 0.5em; 
+}
+@media (max-width: 768px)  { 
+    .breadcrumb>li, 
+    #breadcrumbs>li {
+        margin-bottom: 5px; 
+    } 
+}
 
-/**** Content-level Brand Design Elements ****/
-body { -webkit-font-smoothing: antialiased; }
-section { margin: 1em 0; padding: 1em 0; }
-section.spaced { margin: 3em 0 2em; padding: 6em 0 3em; }
-.navbar-header .navbar-brand { color: #fff; font-weight: bold; font-family: "rotissemiserifnewregular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif; }
-.navbar-header a.navbar-brand:hover { color: #fff; text-decoration: underline; }
-p > a { font-weight: 500; } /* WCAG 2.0 criterion 1.4.1 requires anchors to have more visual distinction than simply color at contrast ratios under 3:1 */
+/* Affix */
+.affix-bottom {
+    position: absolute; 
+    z-index: 1030; 
+}  /* to prevent JQuery offset() from setting position in style and to keep navbar on top of content even at bottom */
+
+/* Affix Top */
+#affix-nav {
+    width: 100%; 
+    margin: -2.35em 0 0; 
+}
+#affix-nav a {
+    text-transform: uppercase; 
+    font-size: 1em; 
+    padding: 0.625em 1em; 
+}
+#affix-nav.affix {
+    margin: 0; 
+    top: 0; 
+    left: 0; 
+    border: 0; 
+    border-radius: 0; 
+    z-index: 1001; 
+}
+#affix-nav li.active > a {
+    font-weight: bold; 
+    background-color: #444; 
+}
+#affix-nav a:hover {
+    background-color: #444; 
+} 
+
+/* Affix Side */
+#affix-side-nav {
+    margin-top: 3em; 
+}
+#affix-side-nav ul {
+    list-style: none; 
+}
+#affix-side-nav ul.affix {
+    position: fixed; 
+    top: 3em; /* matches margin-top of parent */ width:225px; 
+}
+#affix-side-nav li.active > a {
+    font-weight: bold; 
+    border-left: 1px solid #ddd; 
+    color: #741f3f; 
+}
+#affix-side-nav .nav > li > a {
+    padding: 4px 15px; 
+}
+#affix-side-nav li > .nav > li > a {
+    padding: 2px 20px 2px 10px; 
+}
+#affix-side-nav ul > li > ul {
+    padding-left: 15px; 
+}
+#affix-side-nav ul > li:not(.active) > ul {
+    display: none; 
+}
+
+#scroll-top {
+    background: #ffcc33; 
+    font-size: x-large; 
+    border-top-left-radius:3px; 
+    border-top-right-radius:3px; 
+}
+#scroll-top a, #scroll-top a:visited {
+    color: #222; 
+}
+
+/* General Nav */
+.dropdown-menu {
+    z-index: 1001; 
+} /* Place above other most other items, but not above modal positions in the 1030 range */
+
+/*
+ *** Hero Element ***
+ */
+#hero {
+    background-color: #882345; 
+    color: #fff; 
+    margin: 0; 
+    padding-bottom: 2em; 
+}
+#hero h1, 
+#hero .h1, 
+#hero h2, 
+#hero .h2 {
+    font-size: 5em; 
+    padding-top: 2em; 
+}
+
+/* Second-Level Hero */
+.container #hero {
+    margin-top: 1em; 
+    padding-bottom: 1em; 
+    min-height: 15em; 
+}
+.container #hero h1, .container #hero .h1 {
+    font-size: 4em; 
+    padding-top: 1em; 
+}
+
+/* Hero Slideshow */
+#hero .carousel {
+    width: 100%; 
+    max-height: 500px; 
+    overflow-y: hidden;  
+}
+#hero .carousel-inner > .item {
+    max-height: 500px; 
+}
+#hero .carousel-inner > .item > img {
+    width: 100%; 
+    max-height: 500px; 
+}
+#hero.no-stretch .carousel-inner > .item > img {
+    max-height: none; 
+}
+#hero.slideshow {
+    padding-bottom: 0; 
+}
+@media (max-width: 768px) {
+    #hero .carousel-inner .item .btn-lg {
+        padding: 6px 12px; 
+        font-size: 14px; 
+        line-height: 1.42857143; 
+        border-radius: 4px; 
+    } 
+    #hero:not(.no-squeeze) .carousel-inner > .item > img {
+        min-height: 300px; 
+    }
+}
+
+/*
+ *** Footer ***
+ */
+body > footer {
+    margin-top: 20px; 
+}  /* Avoid applying to footers on other elements than body */
+.bg-grey hr {
+    border-color: #d7d7d7; 
+}
+
+/*
+ *** Content-level Brand Design Elements ***
+ */
+body {
+    -webkit-font-smoothing: antialiased; 
+}
+section {
+    margin: 1em 0; 
+    padding: 1em 0; 
+}
+section.spaced {        /* Imitating NMSU homepage styling */
+    margin: 3em 0 2em; 
+    padding: 6em 0 3em; 
+} 
+.navbar-header .navbar-brand {
+    color: #fff; 
+    font-weight: bold; 
+    font-family: "rotissemiserifnewregular", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, Tahoma, sans-serif; 
+}
+.navbar-header a.navbar-brand:hover {
+    color: #fff; 
+    text-decoration: underline; 
+}
+p {
+    margin-bottom: 13px; 
+} /* Keep spacing between paragraphs consistent with line-height (1.5 * line-height (22.652px) - font-size (14px) = 12.98px) */
+p > a {
+    font-weight: 500; 
+} /* WCAG 2.0 criterion 1.4.1 requires anchors to have more visual distinction than simply color at contrast ratios under 3:1 */
 
 /* Headers */
-h1 small, .h1 small { display: block; }
+h1 small, 
+.h1 small {
+    display: block; 
+}
 
 /* Figures */
-.figure-bordered { border: 1px solid #DDDDDD; box-shadow: 0 4px 6px #CCCCCC; padding: 0.5em; }
-figcaption { padding-top: 0.5em; font-size: 0.8em; font-style: italic; }
-.centered img { margin: auto; display: block; }
-.figure-inline { margin: 0 .75em; }
+.figure-bordered {
+    border: 1px solid #DDDDDD; 
+    box-shadow: 0 4px 6px #CCCCCC; 
+    padding: 0.5em; 
+}
+figcaption {
+    padding-top: 0.5em; 
+    font-size: 0.8em; 
+    font-style: italic; 
+}
+.centered img {
+    margin: auto; 
+    display: block; 
+}
+.figure-inline {
+    margin: 0 .75em; 
+}
 
 /* Utilities */
-.offset-top-10  { margin-top: 10px; }
-.offset-bottom-right-20 { margin: 0 20px 20px 0; }
-.offset-bottom-left-20  { margin: 0 0 20px 20px; }
-.offset-reset { margin: 0; }
-.padded-15 { padding: 15px; }
-.bg-primary-dark { background-color: #741f3f; }
-.bg-trans-black { background-color: rgba(0,0,0,0.65) !important; color: #fff; }
-.btn-primary-trans { background-color: rgba(135,34,69,0.5); }
-.bg-black { background-color: #222; border-color: #222; color: #fff !important; }
-.bg-black a { color: #fff; }
-a.bg-black:hover, button.bg-black:hover, button.bg-black:active, button.bg-black:focus, .open > .dropdown-toggle.bg-black { background-color: #444; border-color: #000; color: #fff !important; }
-.bg-white { background-color: #ffffff; color: #000; }
-.sharp { border-radius: 0; }
-.inverted { color: #fff; }
-a.inverted:hover { color: #eee; }
-.shadowed { text-shadow: black 0.1em 0.1em 0.1em; }
-.full-width { width: 100%; }
-.near-full-width { width: 90%; }
-.list-inline.separated li { margin-left: -5px; margin-bottom: 8px; padding-left: 10px; padding-right: 10px; }
-.list-inline.separated li + li { border-left: 2px solid #aaa; }
+.offset-top-10  {
+    margin-top: 10px; 
+}
+.offset-bottom-right-20 {
+    margin: 0 20px 20px 0; 
+}
+.offset-bottom-left-20  {
+    margin: 0 0 20px 20px; 
+}
+.offset-reset {
+    margin: 0; 
+}
+.padded-15 {
+    padding: 15px; 
+}
+.bg-primary-dark {
+    background-color: #741f3f; 
+}
+.bg-trans-black {
+    background-color: rgba(0,0,0,0.65) !important; 
+    color: #fff; 
+}
+.btn-primary-trans {
+    background-color: rgba(135,34,69,0.5); 
+}
+.bg-black {
+    background-color: #222; 
+    border-color: #222; 
+    color: #fff !important; 
+}
+.bg-black a {
+    color: #fff; 
+}
+a.bg-black:hover, 
+button.bg-black:hover, 
+button.bg-black:active, 
+button.bg-black:focus, 
+.open > .dropdown-toggle.bg-black {
+    background-color: #444; 
+    border-color: #000; 
+    color: #fff !important; 
+}
+.bg-white {
+    background-color: #ffffff; 
+    color: #000; 
+}
+.bg-grey {
+    background-color: #ebebeb; 
+}
+.sharp {
+    border-radius: 0; 
+}
+.inverted {
+    color: #fff; 
+}
+a.inverted:hover {
+    color: #eee; 
+}
+.shadowed {
+    text-shadow: black 0.1em 0.1em 0.1em; 
+}
+.full-width {
+    width: 100%; 
+}
+.near-full-width {
+    width: 90%; 
+}
+.list-inline.separated li {
+    margin-left: -5px; 
+    margin-bottom: 8px; 
+    padding-left: 10px; 
+    padding-right: 10px; 
+}
+.list-inline.separated li + li {
+    border-left: 2px solid #aaa; 
+}
 .fixed-bottom-right {
     position: fixed;
     bottom: 0;
     right: 6%;
     z-index: 1020; /* just under bootstrap fixed elements */
+
 }
-.inline-block { display: inline-block !important; }
-.cover-bg { 
+.inline-block {
+    display: inline-block !important; 
+}
+.cover-bg {
+
     min-height: 25em;
     background-size: cover;-o-background-size: cover;-moz-background-size: cover;-webkit-background-size: cover;
     background-repeat: no-repeat;
@@ -150,8 +492,12 @@ a.inverted:hover { color: #eee; }
     /* Declare background image for any page with .cover-bg class in the document head or page-specific stylesheet */
 }
 
-.parallax { background-attachment: fixed; } /* used with .cover-bg */
-.ios .parallax { background-attachment: scroll; }  /* temp fix for lack of fixed support in iOS */
+.parallax {
+    background-attachment: fixed; 
+}  /* used with .cover-bg */
+.ios .parallax {
+    background-attachment: scroll; 
+}  /* temp fix for lack of fixed support in iOS */
 
 .list-group-item-shaded {
     color: #333;
@@ -159,165 +505,102 @@ a.inverted:hover { color: #eee; }
     border-color: #ddd;
 }
 
-/**** Responsive Table Fix for Firefox ****/
+/*
+ *** Shims ***
+ */
+/* Responsive Table Fix for Firefox */
 @-moz-document url-prefix() {
-  fieldset { display: table-cell; }
+    fieldset {
+        display: table-cell; 
+    }
 }
 
-/*** Overlay Captions ***/
-.view {
-    float: left;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    cursor: default;
-    background-color: #fff;
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
+/*
+ *** Legacy Classes and Bootstrap Compatibility ***
+ */
+.striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
 }
-.view .mask,.view .content {
-    position: absolute;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    display: block;
-    max-width: 100%;
-    height: 500px;
-    margin-bottom: auto;
+/* Message boxes */
+/* www.jankoatwarpspeed.com/post/2008/05/22/CSS-Message-Boxes-for-different-message-types.aspx */
+.info, 
+.success, 
+.warning, 
+.error, 
+.validation {
+    background-repeat: no-repeat;
+    background-position: 1em center;
+    border: 1px solid;
+    border-radius: 2px;
+    margin: 1em 0;
+    padding: 1em 1em 1em 4em;
+    width: 50%;
 }
-.view img {
-    display: block;
-    position: relative;
+.info {
+    background-color: #d3e8ff;
+    color: #002953;
 }
-.view h2 {
-    text-transform: uppercase;
-    color: #fff;
-    text-align: center;
-    position: relative;
-    font-size: 17px;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-    margin: 20px 0 0 0;
+.success {
+    background-color: #9cffd5;
+    color: #00693c; 
 }
-.view p {
-    position: relative;
-    color: #fff;
-    padding: 10px 20px 20px;
-    text-align: center;
+.warning {
+    background-color: #fdf5df;
+    color: #6b4e00;
 }
-.view a.info {
+.error {
+    background-color: #f4cecd;
+    color: #8b211e;
+}
+.validation {
+    background-color: #ffccba;
+    color: #d63301;
+}
+
+/* Call to action buttons */
+.call-to-action-button {
+    background: #ededed;
+    border: solid 1px #b7b7b7;
+    border-radius: 0.4em; -moz-border-radius: 0.4em; -webkit-border-radius: .4em; 
+    box-shadow: 0 1px 2px rgba(0,0,0,0.2); -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.2); -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    color: #606060;
+    cursor: pointer;
     display: inline-block;
+    font-size: 0.8em;
+    margin: 0.5em 0;
+    outline: none;
+    padding: 0.5em 1em;
+    text-align: center;
     text-decoration: none;
-    padding: 7px 14px;
-    background: #000;
-    color: #fff;
-    text-transform: uppercase;
-    -webkit-box-shadow: 0 0 1px #000;
-    -moz-box-shadow: 0 0 1px #000;
-    box-shadow: 0 0 1px #000;
 }
-.view a.info:hover {
-    -webkit-box-shadow: 0 0 5px #000;
-    -moz-box-shadow: 0 0 5px #000;
-    box-shadow: 0 0 5px #000;
+.call-to-action-button:hover {
+    text-decoration: none;
+    background: #fff;
 }
-.view-first img {
-   -webkit-transition: all 0.2s linear;
-   -moz-transition: all 0.2s linear;
-   -o-transition: all 0.2s linear;
-   -ms-transition: all 0.2s linear;
-   transition: all 0.2s linear;
+.call-to-action-button:active {
+    position: relative;
+    top: 1px;
+}	
+.xl-button {
+    font-size: 1em;
 }
-.view-first .mask {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   background-color: rgba(136,35,69, 0.7);
-   -webkit-transition: all 0.4s ease-in-out;
-   -moz-transition: all 0.4s ease-in-out;
-   -o-transition: all 0.4s ease-in-out;
-   -ms-transition: all 0.4s ease-in-out;
-   transition: all 0.4s ease-in-out;
+
+/* Transferring .breadcrumb to legacy #breadcrumbs */
+#breadcrumbs {
+  padding: 12px 15px;
+  margin-bottom: 22px;
+  list-style: none;
 }
-.view-first h2 {
-   -webkit-transform: translateY(-100px);
-   -moz-transform: translateY(-100px);
-   -o-transform: translateY(-100px);
-   -ms-transform: translateY(-100px);
-   transform: translateY(-100px);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
+#breadcrumbs > li {
+  display: inline-block;
 }
-.view-first p {
-   -webkit-transform: translateY(100px);
-   -moz-transform: translateY(100px);
-   -o-transform: translateY(100px);
-   -ms-transform: translateY(100px);
-   transform: translateY(100px);
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transition: all 0.2s linear;
-   -moz-transition: all 0.2s linear;
-   -o-transition: all 0.2s linear;
-   -ms-transition: all 0.2s linear;
-   transition: all 0.2s linear;
+#breadcrumbs > li + li:before {
+  content: "/\00a0";
+  padding: 0 5px;
+  color: #cccccc;
 }
-.view-first:hover img {
-   -webkit-transform: scale(1.1,1.1);
-   -moz-transform: scale(1.1,1.1);
-   -o-transform: scale(1.1,1.1);
-   -ms-transform: scale(1.1,1.1);
-   transform: scale(1.1,1.1);
-}
-.view-first a.info {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
-   filter: alpha(opacity=0);
-   opacity: 0;
-   -webkit-transition: all 0.2s ease-in-out;
-   -moz-transition: all 0.2s ease-in-out;
-   -o-transition: all 0.2s ease-in-out;
-   -ms-transition: all 0.2s ease-in-out;
-   transition: all 0.2s ease-in-out;
-}
-.view-first:hover .mask {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
-}
-.view-first:hover h2,
-.view-first:hover p,
-.view-first:hover a.info {
-   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
-   filter: alpha(opacity=100);
-   opacity: 1;
-   -webkit-transform: translateY(0px);
-   -moz-transform: translateY(0px);
-   -o-transform: translateY(0px);
-   -ms-transform: translateY(0px);
-   transform: translateY(0px);
-}
-.view-first:hover p {
-   -webkit-transition-delay: 0.1s;
-   -moz-transition-delay: 0.1s;
-   -o-transition-delay: 0.1s;
-   -ms-transition-delay: 0.1s;
-   transition-delay: 0.1s;
-}
-.view-first:hover a.info {
-   -webkit-transition-delay: 0.2s;
-   -moz-transition-delay: 0.2s;
-   -o-transition-delay: 0.2s;
-   -ms-transition-delay: 0.2s;
-   transition-delay: 0.2s;
+#breadcrumbs > .active {
+  color: #777777;
 }
 
 /* Generated by Font Squirrel (http://www.fontsquirrel.com) on July 9, 2014 */
@@ -325,9 +608,9 @@ a.inverted:hover { color: #eee; }
     font-family: 'rotissemiserifnewregular';
     src: url('../fonts/rotisn_.eot');
     src: url('../fonts/rotisn_.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/rotisn_.woff') format('woff'),
-         url('../fonts/rotisn_.ttf') format('truetype'),
-         url('../fonts/rotisn_.svg#rotissemiserifnewregular') format('svg');
+        url('../fonts/rotisn_.woff') format('woff'),
+        url('../fonts/rotisn_.ttf') format('truetype'),
+        url('../fonts/rotisn_.svg#rotissemiserifnewregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }

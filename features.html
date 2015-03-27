@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="New Mexico State University brand identity guidelines for web development">
         <meta name="author" content="Brendan Shaughnessy">
-        <link rel="icon" href="/favicon.ico">
+        <link rel="icon" href="assets/images/favicon.ico">
 
         <title>Web Development Feature Sheet | New Mexico State University - All About Discovery!</title>
 
@@ -36,7 +36,6 @@
             #buttons-text .btn { margin: 0.35em 0; }
             .panel+.panel { margin-top: 3em; }
             .feature, .panel+.feature { margin-top: 6em; }
-            .overlay { max-width: 500px; }
         </style>
     </head>
 
@@ -51,13 +50,13 @@
                 <div class="row">
                     <div class="col-md-7 col-sm-8">
                         <div class="h1 row">
-                            <div class="col-sm-2 col-xs-3">
-                                <a href="/">
-                                    <img id="logo" src="images/nmsu-logo-only.png" alt="NMSU logo" title="NMSU Home" class="img-responsive">
+                            <div class="col-xs-3">
+                                <a href="//nmsu.edu">
+                                    <img id="logo" src="images/nmsu-logo-80.png" alt="NMSU logo" title="NMSU Home" class="img-responsive pull-right">
                                 </a>
                             </div>
-                            <div class="col-sm-10 col-xs-9">
-                                <a href="/">
+                            <div class="col-xs-9">
+                                <a href="//nmsu.edu">
                                     <img id="logo_tagline" src="images/nmsu-words-only.png" alt="NMSU tagline" title="NMSU Home" class="img-responsive">
                                 </a>
                                 <a href="/"> 
@@ -435,85 +434,6 @@
                                     <p>Another configuration for Affix as a fixed top navigation menu is also available.</p>
                                     <p><a href="top-affix.html" target="_blank" class="btn btn-primary">Affix Top Navigation Demo</a></p>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!--**** Overlay Captions ****-->
-                        <div id="overlay-captions" class="panel panel-default feature">
-                            <div class="panel-heading"><h2>Overlay Captions</h2></div>
-                            <div class="panel-body">
-                                <p>Overlay captions provide captions that appear on hover for Bootstrap thumbnail elements.  To use Overlay Captions, add a <code>&lt;div&gt;</code> tag with the <em>.mask</em> class
-                                    after an <code>&lt;img&gt;</code> tag.  In the <em>.mask</em> element, add a <code>&lt;p&gt;</code> tag with the caption.  You may also add  an optional <code>&lt;a class="info"&gt;</code> to include 
-                                    a styled information link with the caption.
-                                </p>
-                                <p class="alert alert-warning">
-                                    <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>&nbsp; 
-                                    <strong>Please Note:</strong> The hover capability is not available on many mobile devices.  Avoid placing essential information in Overlay Captions.
-                                    It is also good practice to include a copy of the informational link outside of the <em>.mask</em> for mobile users.
-                                    Also note that Overlay Captions are intended only for thumbnails up to 500px tall.  Thumbnails with greater heights will require additional styling on the <em>.mask</em> element.
-                                </p>
-                                <div class="row">
-                                    <div class="col-md-6 col-sm-12 overlay">
-                                        <div class="thumbnail">
-                                            <div class="view view-first">
-                                                <img src="images/overlay/teaching-excellence.jpg" class="img-responsive" alt="Regent Professor Enrico Pontelli works with students in computer lab.">
-                                                <div class="mask">
-                                                    <p id="teaching-caption" class="shadowed">Our dedicated professors provide the resources our students need to achieve their best and meet their academic and personal goals. Inside and outside of the classroom, NMSU's professors actively engage with undergraduate and graduate students, offering individual attention in a learning-centered environment. </p> 
-                                                    <a href="http://nmsu.edu/pointsofpride.html#teaching" aria-describedby="teaching-caption" aria-label="See information about teaching excelence at NMSU" class="info">Read More</a>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <p class="text-center"><a href="http://nmsu.edu/pointsofpride.html#teaching">Teaching Excellence</a></p>
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-6 col-sm-12 overlay">
-                                        <div class="thumbnail">
-                                            <div class="view view-first">
-                                                <img src="images/overlay/celebrate-diversity.jpg" class="img-responsive" alt="A group of students outside Zhul Library">
-                                                <div class="mask">
-                                                    <p id="diversity-caption" class="shadowed">NMSU is classified as a Hispanic-serving institution by the U.S. Department of Education and is a member of the Hispanic Association of Colleges and Universities. For a second consecutive year, NMSU received the Higher Education Excellence in Diversity award by INSIGHT Into Diversity magazine. </p> 
-                                                    <a href="http://nmsu.edu/pointsofpride.html#diversity" aria-describedby="diversity-caption" aria-label="See information about celebrating diversity at NMSU" class="info">Read More</a>
-                                                </div>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                            <p class="text-center"><a href="http://nmsu.edu/pointsofpride.html#diversity">Celebrating Diversity</a></p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <pre class="prettyprint">
-                                    <code class="language-html" data-lang="html">
-    &lt;div class="row"&gt;
-        &lt;div class="col-md-6 col-sm-12"&gt;
-            &lt;div class="thumbnail"&gt;
-                &lt;div class="view view-first"&gt;
-                    &lt;img src="images/overlay/teaching-excellence.jpg" class="img-responsive" alt="Regent Professor Enrico Pontelli works with students in computer lab."&gt;
-                    &lt;div class="mask"&gt;
-                        &lt;p id="teaching-caption" class="shadowed"&gt;Our dedicated professors provide the resources our students need to achieve their best and meet their academic and personal goals. Inside and outside of the classroom, NMSU's professors actively engage with undergraduate and graduate students, offering individual attention in a learning-centered environment. &lt;/p&gt; 
-                        &lt;a href="http://nmsu.edu/pointsofpride.html#teaching" aria-describedby="teaching-caption" aria-label="See information about teaching excellence at NMSU" class="info"&gt;Read More&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="clearfix"&gt;&lt;/div&gt;
-                &lt;p class="text-center"&gt;&lt;a href="http://nmsu.edu/pointsofpride.html#teaching"&gt;Teaching Excellence&lt;/a&gt;&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class="col-md-6 col-sm-12"&gt;
-            &lt;div class="thumbnail"&gt;
-                &lt;div class="view view-first"&gt;
-                    &lt;img src="images/overlay/celebrate-diversity.jpg" class="img-responsive" alt="A group of students outside Zhul Library"&gt;
-                    &lt;div class="mask"&gt;
-                        &lt;p id="diversity-caption" class="shadowed"&gt;NMSU is classified as a Hispanic-serving institution by the U.S. Department of Education and is a member of the Hispanic Association of Colleges and Universities. For a second consecutive year, NMSU received the Higher Education Excellence in Diversity award by INSIGHT Into Diversity magazine. &lt;/p&gt; 
-                        &lt;a href="http://nmsu.edu/pointsofpride.html#diversity" aria-describedby="diversity-caption" aria-label="See information about celebrating diversity at NMSU" class="info"&gt;Read More&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="clearfix"&gt;&lt;/div&gt;
-                &lt;p class="text-center"&gt;&lt;a href="http://nmsu.edu/pointsofpride.html#diversity"&gt;Celebrating Diversity&lt;/a&gt;&lt;/p&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-                                    </code>
-                                </pre>
                             </div>
                         </div>
 
@@ -1902,31 +1822,31 @@
                                 <hr/>
                                 
                                 <h3 id="list-groups-links">Link List Groups</h3>
-                                <div class="list-group">
-                                    <a class="list-group-item active" href="#list-groups-links">Active Link</a> 
-                                    <a class="list-group-item" href="#list-groups-links">Link</a> 
-                                    <a class="list-group-item disabled" href="#">Disabled Link</a> 
+                                <div class="list-group" role="menu">
+                                    <a class="list-group-item active" href="#list-groups-links" role="menuitem">Active Link</a> 
+                                    <a class="list-group-item" href="#list-groups-links" role="menuitem">Link</a> 
+                                    <a class="list-group-item disabled" href="#" role="menuitem" aria-disabled="true">Disabled Link</a> 
                                 </div>
                                 <pre class="prettyprint">
                                     <code class="language-html" data-lang="html">
-    &lt;div class="list-group"&gt;
-        &lt;a class="list-group-item active" href="#"&gt;Active Link&lt;/a&gt; 
-        &lt;a class="list-group-item" href="#"&gt;Link&lt;/a&gt; 
-        &lt;a class="list-group-item disabled" href="#"&gt;Disabled Link&lt;/a&gt; 
+    &lt;div class="list-group" role="menu"&gt;
+        &lt;a class="list-group-item active" href="#" role="menuitem"&gt;Active Link&lt;/a&gt; 
+        &lt;a class="list-group-item" href="#" role="menuitem"&gt;Link&lt;/a&gt; 
+        &lt;a class="list-group-item disabled" href="#" role="menuitem" aria-disabled="true"&gt;Disabled Link&lt;/a&gt; 
     &lt;/div&gt;
                                     </code>
                                 </pre>
                                 <hr/>
                                 
                                 <h3>List Groups of Custom Content</h3>
-                                <div class="list-group">
-                                    <div class="list-group-item">
+                                <div class="list-group" role="list">
+                                    <div class="list-group-item" role="listitem">
                                         <h3>Styled Content</h3>
                                         <p>List groups can be used in more contexts than simple lists.  You can use the <em>.list-group</em> and <em>.list-group-item</em> classes
                                            to mark up almost any sequential content.
                                         </p>
                                     </div>
-                                    <div class="list-group-item">
+                                    <div class="list-group-item" role="listitem">
                                         <h3>Item 2</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
                                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
@@ -1934,30 +1854,30 @@
                                            deserunt mollit anim id est laborum.
                                         </p>
                                     </div>
-                                    <a class="list-group-item">
-                                        <h3>Custom Linked Item</h3>
+                                    <div class="list-group-item" role="listitem">
+                                        <h3>Item 3</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad 
                                            minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit 
                                            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia 
                                            deserunt mollit anim id est laborum.
                                         </p>
-                                    </a>
+                                    </div>
                                 </div>
                                 <pre class="prettyprint">
                                     <code class="language-html" data-lang="html">
-    &lt;div class="list-group"&gt;
-        &lt;div class="list-group-item"&gt;
+    &lt;div class="list-group" role="list&gt;
+        &lt;div class="list-group-item" role="listitem"&gt;
             &lt;h4&gt;Styled Content&lt;/h4&gt;
             &lt;p&gt;...&lt;/p&gt;
         &lt;/div&gt;
-        &lt;div class="list-group-item"&gt;
+        &lt;div class="list-group-item" role="listitem"&gt;
             &lt;h4&gt;Item 2&lt;/h4&gt;
             &lt;p&gt;...&lt;/p&gt;
         &lt;/div&gt;
-        &lt;a class="list-group-item"&gt;
-            &lt;h4&gt;Custom Linked Item&lt;/h4&gt;
+        &lt;div class="list-group-item" role="listitem"&gt;
+            &lt;h4&gt;Item 3&lt;/h4&gt;
             &lt;p&gt;...&lt;/p&gt;
-        &lt;/a&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
                                     </code>
                                 </pre>
@@ -3247,7 +3167,6 @@
                                     <li><a href="#affix-top-text">Affix Navigation (Top)</a></li>
                                 </ul>
                             </li>
-                            <li><a href="#overlay-captions">Overlay Captions</a></li>
                             <li><a href="#parallax-text">Parallax Backgrounds</a></li>
                             <li><a href="#carousel-text">Carousel</a>
                                 <ul class="nav">
