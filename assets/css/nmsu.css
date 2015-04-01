@@ -95,12 +95,12 @@
 }
 @media (max-width: 1200px) { 
     #main-navigation .navbar-nav li a {
-        font-size: 0.9em; padding: 10px 12px; 
+        padding: 10px 10px; 
     } 
 }
 @media (max-width: 992px)  { 
     #main-navigation .navbar-nav li a {
-        font-size: 0.8em; padding: 10px 8px; 
+        padding: 10px 8px; 
     } 
 }
 @media (max-width: 768px)  {
