@@ -369,7 +369,9 @@ body > footer {
 .bg-grey hr {
     border-color: #d7d7d7; 
 }
-
+.bg-grey .nav>li>a:hover {
+    background-color: #d7d7d7;
+}
 /*
  *** Content-level Brand Design Elements ***
  */
@@ -512,6 +514,11 @@ a.inverted:hover {
 .inline-block {
     display: inline-block !important; 
 }
+.hanging-indent {
+    display: inline-block;
+    padding-left: 3em;
+    text-indent: -3em;
+}
 .cover-bg {
 
     min-height: 25em;
@@ -521,7 +528,6 @@ a.inverted:hover {
     color: #444444;
     /* Declare background image for any page with .cover-bg class in the document head or page-specific stylesheet */
 }
-
 .parallax {
     background-attachment: fixed; 
 }  /* used with .cover-bg */

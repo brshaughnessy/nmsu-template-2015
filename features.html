@@ -104,19 +104,22 @@
                             </form>
                         </div>
                     </div>
-                    <ul class="nav navbar-nav main-nav">
-                        <li><a href="http://brand.nmsu.edu">Brand Identity</a></li>
-                        <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Example Layouts <span class="caret"></span></a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="features.html">Feature Sheet</a></li>
+                        <li><a href="hero-slideshow.html">Hero Slideshow</a></li>
+                        <li><a href="top-affix.html">Top Affix</a></li>
+                        <li><a href="one-column.html">One Column</a></li>
+                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Two Column Left <span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="hero-slideshow.html">Hero Slideshow</a></li>
-                                <li><a href="top-affix.html">Top Affix</a></li>
-                                <li><a href="one-column.html">One Column</a></li>
-                                <li><a href="two-column-left.html">Two Column Left</a></li>
-                                <li><a href="two-column-right.html">Two Column Right</a></li>
-                                <li><a href="three-column.html">Three Column</a></li>
+                                <li><a href="two-column-left.html">Standard</a></li>
+                                <li><a href="two-column-left-toplinks.html">Masthead Links</a></li>
+                                <li><a href="two-column-left-hero-2.html">Second Level Hero</a></li>
+                                <li><a href="two-column-left-footer.html">3-Column Footer</a></li>
+                                <li><a href="two-column-left-footer-grey.html">Grey Footer</a></li>
                             </ul>
                         </li>
+                        <li><a href="two-column-right.html">Two Column Right</a></li>
+                        <li><a href="three-column.html">Three Column</a></li>
                     </ul>
                 </div>
             </div>
@@ -165,9 +168,9 @@
                             <div class="panel-heading"><h2>Site Navigation</h2></div>
                             <div class="list-group">
                                 <div class="list-group-item">
-                                    <p>The default site navigation for the NMSU brand is a horizontal, inline list of navigation items resting across the top of the page directly below the masthead.  On smaller viewports,
-                                        this menu collapses down into an expandable vertical list of navigation items.  If the width of the site navigation items overflows the width of the viewport,
-                                        extra items will wrap down to the next line.
+                                    <p>The default site navigation for the NMSU brand is a horizontal, inline list of navigation items resting across the top of the page directly below the masthead.  If the 
+                                        width of the site navigation items overflows the width of the viewport, extra items will wrap down to the next line. On smaller viewports, the menu collapses down into 
+                                        an expandable vertical list of navigation items.  The search bar is contained in the navigation area here so that it persists on mobile devices.  
                                     </p>
                                     <pre class="prettyprint">
                                         <code class="language-html" data-lang="html">
@@ -180,28 +183,39 @@
                     &lt;span class="icon-bar"&gt;&lt;/span&gt;
                     &lt;span class="icon-bar"&gt;&lt;/span&gt;
                 &lt;/button&gt;
-                &lt;a href="//nmsu.edu" class="navbar-brand visible-xs"&gt;
-                    &lt;img src="assets/images/logo-mobile-white.png" alt="NMSU Logo"/&gt;
-                &lt;/a&gt;
+                &lt;a href="//nmsu.edu" class="navbar-brand visible-xs"&gt;&lt;img src="assets/images/logo-mobile-white.png" alt="NMSU Logo"/&gt;&lt;/a&gt;
             &lt;/div&gt;
             &lt;div class="collapse navbar-collapse" id="main-navigation-options"&gt;
-                &lt;ul class="nav navbar-nav main-nav"&gt;
-                    &lt;li&gt;&lt;a href="http://nmsu.edu/about.html"&gt;About NMSU&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="http://nmsu.edu/admissions.html"&gt;Admissions&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="http://nmsu.edu/academics.html"&gt;Academics&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="http://nmsu.edu/studentlife.html"&gt;Student Life&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="http://nmsu.edu/research.html"&gt;Research&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a href="http://nmsu.edu/outreach.html"&gt;Extension & Outreach&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;
-                        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"&gt;
-                            Dropdown &lt;span class="caret"&gt;&lt;/span&gt;
-                        &lt;/a&gt;
+                &lt;div id="search-stack"&gt; 
+                    &lt;div class="form-group" role="search"&gt;
+                        &lt;form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search"&gt;
+                            &lt;div class="form-group has-feedback" role="search"&gt;
+                                &lt;label class="sr-only" for="search-query"&gt;Search&lt;/label&gt;
+                                &lt;input name="q"  type="text" id="search-query" title="Site Search" class="form-control" placeholder="Search" /&gt;
+                                &lt;span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"&gt;&lt;/span&gt;
+                                &lt;button name="submit_search" type="submit" id="search-button" class="sr-only" value="Search" title="Submit Search"&gt;&lt;/button&gt;
+                                &lt;input type="hidden" name="domains" value="nmsu.edu" /&gt;
+                                &lt;input type="hidden" name="sitesearch" value="nmsu.edu" /&gt;
+                            &lt;/div&gt;
+                        &lt;/form&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;ul class="nav navbar-nav"&gt;
+                    &lt;li&gt;&lt;a href="features.html"&gt;Feature Sheet&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="hero-slideshow.html"&gt;Hero Slideshow&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="top-affix.html"&gt;Top Affix&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="one-column.html"&gt;One Column&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"&gt;Two Column Left &lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
                         &lt;ul class="dropdown-menu" role="menu"&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Additional Navigation Item&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Additional Navigation Item 2&lt;/a&gt;&lt;/li&gt;
-                            &lt;li&gt;&lt;a href="#"&gt;Additional Navigation Item 3&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="two-column-left.html"&gt;Standard&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="two-column-left-toplinks.html"&gt;Masthead Links&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="two-column-left-hero-2.html"&gt;Second Level Hero&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="two-column-left-footer.html"&gt;3-Column Footer&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a href="two-column-left-footer-grey.html"&gt;Grey Footer&lt;/a&gt;&lt;/li&gt;
                         &lt;/ul&gt;
                     &lt;/li&gt;
+                    &lt;li&gt;&lt;a href="two-column-right.html"&gt;Two Column Right&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="three-column.html"&gt;Three Column&lt;/a&gt;&lt;/li&gt;
                 &lt;/ul&gt;
             &lt;/div&gt;
         &lt;/div&gt;
@@ -211,7 +225,7 @@
                                 </div>
                                 <div class="list-group-item">
                                     <h3 id="breadcrumb-text">Breadcrumbs</h3>
-                                    <p>Breadcrumb navigation is used at the top of the page (below any hero image and above the page content) to present the user with an idea of the current page's location in a navigable 
+                                    <p>Breadcrumb navigation is usually used at the top of a page (below any hero image and above the page content) to present the user with an idea of the current page's location in a navigable 
                                        and hierarchical representation of the site.  To create breadcrumb navigation, use a <code>&lt;nav&gt;</code> with a nested <code>&lt;ol class="breadcrumb"&gt;</code> and links in list
                                        items to represent all pages above the current page.  The current page title should be in the last list item.
                                     </p>
@@ -277,6 +291,7 @@
                                 <div class="list-group">
                                     <a href="hero-slideshow.html" target="_blank" class="list-group-item">Hero Slideshow</a>
                                     <a href="one-column.html" target="_blank" class="list-group-item">No Hero Image</a>
+                                    <a href="two-column-left-hero-2.html" target="_blank" class="list-group-item">Child Layout Hero</a>
                                 </div>
                             </div>
                         </div>
@@ -1001,6 +1016,15 @@
     &lt;/blockquote&gt;
                                     </code>
                                 </pre>
+                            </div>
+                        </div>
+                        <div class="panel panel-default" id="text-hanging-indent-text">
+                            <div class="panel-heading"><h3>Hanging Indents</h3></div>
+                            <div class="panel-body">
+                                <p class="hanging-indent">Simply add the class <em>.hanging-indent</em> to an element to format that element using a hanging indentation.  Lorem ipsum dolor 
+                                    sit amet, consectetur adipiscing elit. Morbi gravida cursus massa et convallis. Vivamus non quam nec urna maximus eleifend. Mauris non sapien ac erat 
+                                    vehicula luctus. Etiam faucibus ligula eu eros varius, nec finibus lacus feugiat. Nunc quis sem suscipit, consectetur ex sed, scelerisque lectus.
+                                </p>
                             </div>
                         </div>
                         <div class="panel panel-default" id="text-alignment-text">
