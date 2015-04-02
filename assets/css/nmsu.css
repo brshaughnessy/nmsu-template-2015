@@ -46,7 +46,8 @@
     font-size: 0.8em; 
     z-index: 1030;
 } 
-#masthead-links .navbar-nav > li > a:hover {
+#masthead-links .navbar-nav > li > a:hover,
+#masthead-links .navbar-nav > li > a:focus {
     background-color: transparent; 
     color: #df7a00; 
 } 
