@@ -27,8 +27,8 @@
 #masthead .h1 small { 
     float: left; 
     color: #fff; 
-    font-size: 50%; 
-    font-weight: 500; 
+    font-size: 40%; 
+    font-weight: 700; 
 }
 #masthead .h1 a small:hover, 
 #masthead h1 a small:hover {
@@ -94,6 +94,13 @@
     margin-top: -80px; 
     float: right; 
 }
+#main-navigation .navbar-dept {
+    padding: 0 0 10px 45px;
+    color:  #fff;
+    font-weight: 700;
+    clear: left;
+    width: 90%;
+}
 @media (max-width: 1200px) { 
     #main-navigation .navbar-nav li a {
         padding: 10px 10px; 
@@ -110,7 +117,8 @@
         text-align: left;
     }
     #main-navigation .navbar-brand {
-        padding: 10px 15px; 
+        padding: 10px 0 0 15px; 
+        height: auto;
     }
     #main-navigation .navbar-nav li {
         display: block; 
@@ -141,7 +149,7 @@
 }
 @media (max-width: 400px) {
     #main-navigation .navbar-brand {
-        padding: 12px 10px 8px 15px; 
+        padding: 12px 0px 0px 15px; 
     } 
     #main-navigation .navbar-brand img {
         width: 235px; 
@@ -207,8 +215,8 @@
 }
 .breadcrumb>li+li:before, 
 #breadcrumbs>li+li:before {
-    content: "\276F"; 
-    font-weight: bold;
+    font-family: "Glyphicons Halflings";
+    content: "\E080"; 
     padding-right: 0.5em; 
 }
 @media (max-width: 768px)  { 
