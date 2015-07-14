@@ -1,6 +1,22 @@
 /*
  *** Masthead ***
  */
+body.fixed-header {
+    margin-top: 60px;
+}
+
+@media (min-width: 768px) {
+    .navbar-fixed-mobile-only {
+        position: relative;
+    }
+    body.fix-top {
+        margin-top: 175px;
+    }
+    body.fix-top-scroll {
+        margin-top: 115px;
+    }
+}
+
 #mosaic { 
     position:absolute; 
     top:0; 
@@ -67,6 +83,9 @@
 }  /* keep over top nav */
 #main-navigation {
     margin: 0; 
+}
+#main-navigation2 {
+    background-color: #882345; 
 }
 #main-navigation .navbar-nav {
     float: none; 
