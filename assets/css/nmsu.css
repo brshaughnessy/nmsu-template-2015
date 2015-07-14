@@ -16,6 +16,11 @@ body.fixed-header {
         margin-top: 115px;
     }
 }
+@media (max-width: 767px) {
+    body.fix-top, body.fix-top-scroll {
+        margin-top: 60px;
+    }
+}
 
 #mosaic { 
     position:absolute; 
@@ -73,6 +78,12 @@ body.fixed-header {
     background-color: transparent; 
     color: #df7a00; 
 }
+@media (max-width: 375px) {
+    #nmsu-logo-xs {
+        width: 230px;
+    }
+}
+
 
 /***
  * Navigation ***
