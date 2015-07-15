@@ -16,7 +16,7 @@ body.fixed-header {
     right: 8px;
 }
 @media (min-width: 768px) {
-    #navbar-dept-link {
+    body.fix-top #navbar-dept-link {
         margin-top: -6px;
     }
     .navbar-fixed-mobile-only {
