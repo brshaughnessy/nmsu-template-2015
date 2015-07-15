@@ -26,37 +26,45 @@
     <body class="fix-top">
         <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-        <nav class="navbar navbar-default navbar-fixed-top" style="background-color: #882345; border: 0;">
+        <nav class="navbar navbar-default navbar-fixed-top" id="fixed-masthead" style="background-color: #882345; border: 0;">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header" style="border: none;">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <div id="navbar-brand" class="navbar-brand padded-15" style="height: auto;">
-                        <a href="/">
-                            <img src="assets/images/logov2b_90.png" alt="NMSU Logo" class="hidden-xs" id="nmsu-logo" id="masthead-logo">
-                            <img src="assets/images/logo-mobile-white.png" class="visible-xs" id="nmsu-logo-xs" alt="NMSU Logo">
-                        </a>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10" id="navbar-header-col">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header" style="border: none;">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" id="navbar-header-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <div id="navbar-brand" class="navbar-brand padded-15" style="height: auto;">
+                                <a href="/" style="display: block;">
+                                    <img src="assets/images/logov2b_90.png" alt="NMSU Logo" class="hidden-xs" id="nmsu-logo" id="masthead-logo">
+                                    <img src="assets/images/logo-mobile-white.png" class="visible-xs" id="nmsu-logo-xs" alt="NMSU Logo">
+                                </a>
+                                <a href="/" class="dept-name" id="navbar-dept-link" style="display: block;">
+                                    University Communications Web Development Branding Transition Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-3 col-lg-2">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:none; box-shadow: none; -webkit-box-shadow: none; padding:5px 15px">
+                            <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search navbar-form navbar-right" role="search" style="border:none; box-shadow: none; -webkit-box-shadow: none;">
+                                <div class="form-group has-feedback" role="search">
+                                    <label class="sr-only" for="search-query">Search</label>
+                                    <input name="q" type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword">
+                                    <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
+                                    <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
+                                    <input type="hidden" name="domains" value="nmsu.edu">
+                                    <input type="hidden" name="sitesearch" value="nmsu.edu">
+                                </div>
+                            </form>
+                        </div><!-- /.navbar-collapse -->
                     </div>
                 </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:none; box-shadow: none; -webkit-box-shadow: none; padding:5px 15px">
-                    <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search navbar-form navbar-right" role="search" style="border:none; box-shadow: none; -webkit-box-shadow: none;">
-                        <div class="form-group has-feedback" role="search">
-                            <label class="sr-only" for="search-query">Search</label>
-                            <input name="q" type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword">
-                            <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
-                            <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
-                            <input type="hidden" name="domains" value="nmsu.edu">
-                            <input type="hidden" name="sitesearch" value="nmsu.edu">
-                        </div>
-                    </form>
-                </div><!-- /.navbar-collapse -->
             </div><!-- /.container-fluid -->
             
             <!-- PRIMARY NAVBAR & PAGE CONTENT
@@ -188,25 +196,14 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
-            function scroll_shrink(event) {
-                $("#nmsu-logo").finish()
-                    .animate({
-                        width: 270,
-                        height: 28
-                    }, {
-                        duration: 300,
-                        queue: false,
-                        complete: function() {
-                            $("#nmsu-logo").attr("src","assets/images/logo-mobile-white.png")
-                                .css({"width": "", "height": ""});
-                        }
-                    });
-                $("body").removeClass("fix-top");
-                $("body").addClass("fix-top-scroll");  
-                $(window).on("scroll", scroll_grow);
-            };
-            function scroll_grow(event) {
-                if ($(window).scrollTop() === 0) {
+            function animateTop() {
+                $("#navbar-dept-link").finish()
+                        .animate({
+                            "margin-left": 90
+                        }, {
+                            duration: 200,
+                            queue: false
+                        });
                     $("#nmsu-logo").finish()
                         .attr("src", "assets/images/logov2b_90.png")
                         .css({"width": "270", "height": "28"})
@@ -214,20 +211,76 @@
                             width: 427,
                             height: 90
                         }, {
-                            duration: 300,
+                            duration: 200,
                             queue: false,
                             complete: function() {
                                 $("#nmsu-logo").attr("src","assets/images/logov2b_90.png")
                                     .css({"width": "", "height": ""});
+                                //updateMargin();
                             }
                         });
-                    $("body").removeClass("fix-top-scroll");
-                    $("body").addClass("fix-top");
-                    $(window).off("scroll", event);
-                    $(window).one("scroll", scroll_shrink);
-                }
             }
-            $(window).one("scroll", scroll_shrink);
+            function animateBottom() {
+                $("#navbar-dept-link").finish()
+                        .animate({
+                            marginLeft: 31
+                        }, {
+                            duration: 200,
+                            queue: false
+                        });
+                    $("#nmsu-logo").finish()
+                        .animate({
+                            width: 270,
+                            height: 28
+                        }, {
+                            duration: 200,
+                            queue: false,
+                            complete: function() {
+                                $("#nmsu-logo").attr("src","assets/images/logo-mobile-white.png")
+                                    .css({"width": "", "height": ""});
+                                //updateMargin();
+                            }
+                        });
+            }
+            function scrollShift(event) {
+                var position = $(window).scrollTop();
+                var view_is_xs = $("#nmsu-logo-xs").is(":visible");
+                if (!view_is_xs) {
+                    if (position === 0 && $("body").hasClass("fix-top-scroll")) {
+                        animateTop();
+                        $("body").removeClass("fix-top-scroll");
+                        $("body").addClass("fix-top");
+                        $("#search-query").removeClass("input-sm");
+                    } else if (position !== 0 && $("body").hasClass("fix-top")) {
+                        animateBottom(); 
+                        $("body").removeClass("fix-top");
+                        $("body").addClass("fix-top-scroll");
+                        $("#search-query").addClass("input-sm");
+                    }
+                }
+                $(window).one("scroll", scrollShift);
+            }
+            
+            var resize_timeout = null;
+            function getUpperMargin() {
+                return $("#fixed-masthead").innerHeight();
+            }
+            function marginShift(event) {
+                window.clearTimeout(resize_timeout);
+                resize_timeout = window.setTimeout(updateMargin, 100);
+                $(window).one("resize", marginShift);
+            }
+            function updateMargin() {
+                var newMargin = getUpperMargin();
+                //$("body").finish().animate({marginTop: newMargin},50);
+                $("body").css({marginTop: newMargin});
+            }
+            
+            $(document).ready(function() {
+                $("body").css({marginTop: getUpperMargin});
+                $(window).one("scroll", scrollShift);
+                $(window).one("resize", marginShift);
+            });
         </script>
     </body>
 </html>

@@ -4,21 +4,67 @@
 body.fixed-header {
     margin-top: 60px;
 }
-
+#navbar-dept-link {
+    display: block;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+#navbar-header-toggle {
+    position: fixed; 
+    top: 8px; 
+    right: 8px;
+}
 @media (min-width: 768px) {
+    #navbar-dept-link {
+        margin-top: -6px;
+    }
     .navbar-fixed-mobile-only {
         position: relative;
     }
     body.fix-top {
-        margin-top: 175px;
+        margin-top: 195px;
     }
     body.fix-top-scroll {
-        margin-top: 115px;
+        margin-top: 175px;
+    }
+    body.fix-top #navbar-brand {
+        padding: 15px;
+    }
+    body.fix-top-scroll #navbar-brand {
+        padding: 10px;
+    }
+    body.fix-top #navbar-dept-link {
+        color: #fff;
+        margin-left: 90px;
+    }
+    body.fix-top-scroll #navbar-dept-link {
+        color: #fff;
+        margin-left: 31px;
+        font-size: .8em;
+    }
+    body.fix-top-scroll #main-navigation-options {
+        font-size: .9em;
+    }
+    body.fix-top-scroll #main-navigation-options>ul>li>a {
+        padding: 9px;
     }
 }
 @media (max-width: 767px) {
     body.fix-top, body.fix-top-scroll {
-        margin-top: 60px;
+        margin-top: 90px;
+    }
+    #navbar-header-col {
+        z-index: 1031;
+        line-height: 1.25em;
+    }
+    #navbar-dept-link {
+        margin-left: 31px !important;
+        margin-top: 5px;
+        font-size: 13px;
+    }
+    #navbar-dept-link {
+        padding-right: 60px;
     }
 }
 
