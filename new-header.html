@@ -40,7 +40,7 @@
                             </button>
                             <div id="navbar-brand" class="navbar-brand padded-15" style="height: auto;">
                                 <a href="/" style="display: block;">
-                                    <img src="assets/images/logov2b_90.png" alt="NMSU Logo" class="hidden-xs" id="nmsu-logo" id="masthead-logo">
+                                    <img src="assets/images/logov2b_90.png" alt="NMSU Logo" class="hidden-xs" id="nmsu-logo">
                                     <img src="assets/images/mobile_logo.png" class="visible-xs" id="nmsu-logo-xs" alt="NMSU Logo">
                                 </a>
                                 <a href="/" class="dept-name" id="navbar-dept-link" style="display: block;">
@@ -49,7 +49,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-md-3 col-lg-2">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="border:none; box-shadow: none; -webkit-box-shadow: none; padding:5px 15px">
                             <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search navbar-form navbar-right" role="search" style="border:none; box-shadow: none; -webkit-box-shadow: none;">
@@ -196,7 +196,7 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
         <script>
-            function animateTop() {
+            function animateTopWide() {
                 $("#navbar-dept-link").finish()
                         .animate({
                             "margin-left": 90
@@ -220,7 +220,7 @@
                             }
                         });
             }
-            function animateBottom() {
+            function animateBottomWide() {
                 $("#navbar-dept-link").finish()
                         .animate({
                             marginLeft: 31
@@ -242,34 +242,45 @@
                             }
                         });
             }
+            function animateTop() {
+                $("#navbar-dept-link").finish()
+                        .animate({
+                            height: "toggle"
+                        }, {
+                            duration: 200,
+                            queue: false
+                        });
+            }
+            function animateBottom() {
+                $("#navbar-dept-link").finish()
+                        .animate({
+                            height: "toggle"
+                        }, {
+                            duration: 200,
+                            queue: false
+                        });
+            }
             function scrollShift(event) {
                 var position = $(window).scrollTop();
                 var view_is_xs = $("#nmsu-logo-xs").is(":visible");
-                if (!view_is_xs) {
-                    if (position === 0 && $("body").hasClass("fix-top-scroll")) {
-                        animateTop();
-                        $("body").removeClass("fix-top-scroll");
-                        $("body").addClass("fix-top");
-                        $("#search-query").removeClass("input-sm");
-                    } else if (position !== 0 && $("body").hasClass("fix-top")) {
-                        animateBottom(); 
-                        $("body").removeClass("fix-top");
-                        $("body").addClass("fix-top-scroll");
-                        $("#search-query").addClass("input-sm");
+                if (position === 0 && $("body").hasClass("fix-top-scroll")) {
+                    if (!view_is_xs) {
+                        animateTopWide();
+                    } 
+                    animateTop();
+                    $("body").removeClass("fix-top-scroll");
+                    $("body").addClass("fix-top");
+                    $("#search-query").removeClass("input-sm");
+                } else if (position !== 0 && $("body").hasClass("fix-top")) {
+                    if (!view_is_xs) {
+                        animateBottomWide();
                     }
-                } else {
-                    if (position === 0 && $("body").hasClass("fix-top-scroll")) {
-                        $("#navbar-dept-link").fadeIn();
-                        $("body").removeClass("fix-top-scroll");
-                        $("body").addClass("fix-top");
-                        $("#search-query").removeClass("input-sm");
-                    } else if (position !== 0 && $("body").hasClass("fix-top")) {
-                        $("#navbar-dept-link").fadeOut();
-                        $("body").removeClass("fix-top");
-                        $("body").addClass("fix-top-scroll");
-                        $("#search-query").addClass("input-sm");
-                    }
+                    animateBottom();
+                    $("body").removeClass("fix-top");
+                    $("body").addClass("fix-top-scroll");
+                    $("#search-query").addClass("input-sm");
                 }
+            
                 $(window).one("scroll", scrollShift);
             }
             
