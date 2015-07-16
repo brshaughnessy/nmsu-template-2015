@@ -11,6 +11,8 @@
 
         <!-- Bootstrap Glyphicon font and CSS -->
         <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+        <!-- Google Font CDN for Open Sans font -->
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap-nmsu.min.css" rel="stylesheet" type="text/css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,14 +36,12 @@
                         <div class="navbar-header" style="border: none;">
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" id="navbar-header-toggle">
                                 <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
+                                Menu | <i class="glyphicon glyphicon-search"></i>
                             </button>
                             <div id="navbar-brand" class="navbar-brand padded-15" style="height: auto;">
                                 <a href="/" style="display: block;">
                                     <img src="assets/images/logov2b_90.png" alt="NMSU Logo" class="hidden-xs" id="nmsu-logo" id="masthead-logo">
-                                    <img src="assets/images/logo-mobile-white.png" class="visible-xs" id="nmsu-logo-xs" alt="NMSU Logo">
+                                    <img src="assets/images/mobile_logo.png" class="visible-xs" id="nmsu-logo-xs" alt="NMSU Logo">
                                 </a>
                                 <a href="/" class="dept-name" id="navbar-dept-link" style="display: block;">
                                     University Communications Web Development Branding Transition Project
@@ -253,6 +253,18 @@
                         $("#search-query").removeClass("input-sm");
                     } else if (position !== 0 && $("body").hasClass("fix-top")) {
                         animateBottom(); 
+                        $("body").removeClass("fix-top");
+                        $("body").addClass("fix-top-scroll");
+                        $("#search-query").addClass("input-sm");
+                    }
+                } else {
+                    if (position === 0 && $("body").hasClass("fix-top-scroll")) {
+                        $("#navbar-dept-link").fadeIn();
+                        $("body").removeClass("fix-top-scroll");
+                        $("body").addClass("fix-top");
+                        $("#search-query").removeClass("input-sm");
+                    } else if (position !== 0 && $("body").hasClass("fix-top")) {
+                        $("#navbar-dept-link").fadeOut();
                         $("body").removeClass("fix-top");
                         $("body").addClass("fix-top-scroll");
                         $("#search-query").addClass("input-sm");

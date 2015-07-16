@@ -1,3 +1,7 @@
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Open Sans", "Helvetica", sans-serif;
+}
+
 /*
  *** Masthead ***
  */
@@ -12,8 +16,11 @@ body.fixed-header {
 }
 #navbar-header-toggle {
     position: fixed; 
-    top: 8px; 
-    right: 8px;
+    top: 0; 
+    right: 0;
+}
+#navbar-header-toggle:hover, #navbar-header-toggle:active, #navbar-header-toggle:focus {
+    color: #000;
 }
 @media (min-width: 768px) {
     body.fix-top #navbar-dept-link {
@@ -63,8 +70,14 @@ body.fixed-header {
         margin-top: 5px;
         font-size: 13px;
     }
+    #navbar-header-toggle {
+        font-size: 13px;
+    }
     #navbar-dept-link {
         padding-right: 60px;
+    }
+    #navbar-brand {
+        padding-left: 0;
     }
 }
 
@@ -126,7 +139,7 @@ body.fixed-header {
 }
 @media (max-width: 375px) {
     #nmsu-logo-xs {
-        width: 220px;
+        width: 200px;
     }
 }
 
