@@ -9,8 +9,8 @@
         <link rel="icon" href="assets/images/favicon.ico">
         <title>Bootstrapped Template, 2-Column Left Hero-2 | New Mexico State University - All About Discovery!</title>
 
-        <!-- Bootstrap Glyphicon font and CSS -->
-        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+        <!-- Google Font CDN for Open Sans font -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans&subset=latin,latin-ext" rel="stylesheet" type="text/css">
         <!-- Bootstrap core CSS -->
         <link href="assets/css/bootstrap-nmsu.min.css" rel="stylesheet" type="text/css">
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -22,97 +22,80 @@
         <link href="assets/css/nmsu.min.css" rel="stylesheet" type="text/css">
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <!--[if IE 10]><script src="assets/js/ie10-viewport.min.js"></script><![endif]-->
+        
         <style type="text/css">
             #hero { background-image: url(images/hero/about-nmsu.jpg); }
         </style>
     </head>
-    <body>
+    <body class="fix-top">
         <a href="#content" class="sr-only sr-only-focusable">Skip to main content</a>
 
-        <!-- ON CANVAS CONTENT
-        ================================================== -->
-        <!-- header -->    
-        <header id="masthead" class="bg-primary hidden-xs" role="banner">
-            <div class="container">
+        <header class="navbar navbar-default navbar-fixed-top" id="fixed-masthead">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-7 col-sm-8">
-                        <div class="h1 row">
-                            <div class="col-xs-3">
-                                <a href="//nmsu.edu">
-                                    <img id="logo" src="assets/images/nmsu-logo-80.png" alt="NMSU logo" title="NMSU Home" class="img-responsive pull-right">
+                    <div class="col-xs-12 col-sm-8 col-md-9 col-lg-10" id="navbar-header-col">
+                        <!-- Brand and toggle get grouped for better mobile display -->
+                        <div class="navbar-header" id="fixed-navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" id="navbar-header-toggle">
+                                <span class="sr-only">Toggle navigation</span>
+                                Menu | <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                            <div id="navbar-brand" class="navbar-brand padded-15">
+                                <a href="/">
+                                    <img src="assets/images/nmsu-logo.png" alt="NMSU Logo" class="hidden-xs" id="nmsu-logo">
+                                    <img src="assets/images/nmsu-logo-small.png" class="visible-xs" id="nmsu-logo-xs" alt="NMSU Logo">
                                 </a>
-                            </div>
-                            <div class="col-xs-9">
-                                <a href="//nmsu.edu">
-                                    <img id="logo_tagline" src="assets/images/nmsu-words-only.png" alt="NMSU tagline" title="NMSU Home" class="img-responsive">
-                                </a>
-                                <a href="#">
-                                    <small>University Communications Branding Initiative</small>
+                                <a href="/" id="navbar-dept-link">
+                                    University Communications Web Development Branding Transition Project
                                 </a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-md-offset-1 hidden-xs col-sm-4">
-                        <!-- place holder for search -->
-                    </div>
-                </div>
-            </div>
-        </header>
-        <div class="hidden-xs pull-right" id="mosaic-low">
-            <img id="color-bars" src="assets/images/mosaic2.png" alt="NMSU Branding">
-        </div>
-
-        <!-- PRIMARY NAVBAR & PAGE CONTENT
-        ================================================== -->
-        <nav class="navbar navbar-default navbar-static-top" id="main-navigation" role="navigation">
-            <div class="container">
-                <div class="navbar-header bg-primary-dark" id="main-navigation-container">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navigation-options">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="//nmsu.edu" class="navbar-brand visible-xs"><img src="assets/images/logo-mobile-white.png" alt="NMSU Logo"/></a>
-                    <a href="/" class="navbar-dept visible-xs">
-                      	<small>University Communications Branding Initiative</small>
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="main-navigation-options">
-                    <div id="search-stack" class="offset-top-10"> 
-                        <div class="form-group" role="search">
-                            <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search">
+                    <div class="col-xs-12 col-sm-4 col-md-3 col-lg-2">
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse" id="navbar-collapse">
+                            <form action="//www.nmsu.edu/search_results.php" method="POST" id="site-search" class="form-search navbar-form navbar-right" role="search">
                                 <div class="form-group has-feedback" role="search">
                                     <label class="sr-only" for="search-query">Search</label>
-                                    <input name="q"  type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword" />
+                                    <input name="q" type="text" id="search-query" title="Site Search" class="form-control" placeholder="Type a Keyword">
                                     <span class="glyphicon glyphicon-search form-control-feedback text-muted" aria-hidden="true"></span>
                                     <button name="submit_search" type="submit" id="searchButton" class="searchButton sr-only" value="Search" title="Submit Search"></button>
-                                    <input type="hidden" name="domains" value="nmsu.edu" />
-                                    <input type="hidden" name="sitesearch" value="nmsu.edu" />
+                                    <input type="hidden" name="domains" value="nmsu.edu">
+                                    <input type="hidden" name="sitesearch" value="nmsu.edu">
                                 </div>
                             </form>
-                        </div>
+                        </div><!-- /.navbar-collapse -->
                     </div>
-                    <ul class="nav navbar-nav">
-                        <li><a href="features.html">Feature Sheet</a></li>
-                        <li><a href="hero-slideshow.html">Hero Slideshow</a></li>
-                        <li><a href="top-affix.html">Top Affix</a></li>
-                        <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Layout Examples <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-                                <li><a href="one-column.html">One Column</a></li>
-                                <li><a href="two-column-left.html">Two Column Left</a></li>
-                                <li><a href="two-column-left-toplinks.html">Masthead Links</a></li>
-                                <li><a href="two-column-left-hero-2.html">Second Level Hero</a></li>
-                                <li><a href="two-column-left-footer.html">3-Column Footer</a></li>
-                                <li><a href="two-column-left-footer-grey.html">Grey Footer</a></li>
-                                <li><a href="two-column-right.html">Two Column Right</a></li>
-                                <li><a href="three-column.html">Three Column</a></li>
-                            </ul>
-                        </li>
-                    </ul>
                 </div>
-            </div>
-        </nav>
+            </div><!-- /.container-fluid -->
+            
+            <!-- PRIMARY NAVBAR & PAGE CONTENT
+            ================================================== -->
+            <nav class="navbar navbar-default navbar-static-top" id="main-navigation" role="navigation">
+                <div class="container">
+                    <div class="collapse navbar-collapse" id="main-navigation-options">
+                        <ul class="nav navbar-nav">
+                            <li><a href="features.html">Feature Sheet</a></li>
+                            <li><a href="hero-slideshow.html">Hero Slideshow</a></li>
+                            <li><a href="top-affix.html">Top Affix</a></li>
+                            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">Layout Examples <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="one-column.html">One Column</a></li>
+                                    <li><a href="two-column-left.html">Two Column Left</a></li>
+                                    <li><a href="two-column-left-toplinks.html">Masthead Links</a></li>
+                                    <li><a href="two-column-left-hero-2.html">Second Level Hero</a></li>
+                                    <li><a href="two-column-left-footer.html">3-Column Footer</a></li>
+                                    <li><a href="two-column-left-footer-grey.html">Grey Footer</a></li>
+                                    <li><a href="two-column-right.html">Two Column Right</a></li>
+                                    <li><a href="three-column.html">Three Column</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="clearfix visible-lg-block visible-md-block visible-sm-block"></div>
 
         <!-- Interior Content Begins - 3rd Level
         ================================================== -->
@@ -186,5 +169,6 @@
         <script src="assets/js/jquery-2.1.3.min.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/fixtop.min.js"></script> <!-- Support for fixed top header -->
     </body>
 </html>
