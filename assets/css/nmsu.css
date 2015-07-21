@@ -587,6 +587,30 @@ a.inverted:hover {
     border-color: #ddd;
 }
 
+/* Override Bootstrap print styles */
+@media print {
+    img {
+        max-width: 100% !important;
+    }
+    body {
+        margin-top: 0 !important;
+    }
+    #fixed-masthead {
+        position: relative;
+        background-color: #882345;
+    }
+    #navbar-header-toggle {
+        position: relative;
+        float: right;
+    }
+    #navbar-dept-link {
+        display: block !important;
+    }
+    #scroll-top {
+        display: none !important;
+    }
+}
+
 /*
  *** Shims and Legacy Support ***
  */
@@ -600,7 +624,9 @@ a.inverted:hover {
 /*
  *** Legacy Classes and Bootstrap Compatibility ***
  */
-.striped > tbody > tr:nth-of-type(odd) {
+.striped > tbody > tr:nth-of-type(odd),
+.zebra-table > tbody > tr:nth-of-type(odd), 
+.zebra-table > tr:nth-of-type(odd) {
     background-color: #f9f9f9;
 }
 /* Message boxes */
@@ -685,26 +711,4 @@ a.inverted:hover {
   color: #767676;
 }
 
-/* Override Bootstrap print styles */
-@media print {
-    img {
-        max-width: 100% !important;
-    }
-    body {
-        margin-top: 0 !important;
-    }
-    #fixed-masthead {
-        position: relative;
-        background-color: #882345;
-    }
-    #navbar-header-toggle {
-        position: relative;
-        float: right;
-    }
-    #navbar-dept-link {
-        display: block !important;
-    }
-    #scroll-top {
-        display: none !important;
-    }
-}
+
